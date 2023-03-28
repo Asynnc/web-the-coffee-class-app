@@ -10,9 +10,9 @@ export function Header() {
 
       <div className='flex items-center'>
         <nav className='text-sm flex items-center gap-6 '>
-          <a className='text-sinc-400 hover:text-zinc-100 transition' href="">API</a>
-          <a className='text-sinc-400 hover:text-zinc-100 transition' href="">Documentation</a>
-          <a className='text-sinc-400 hover:text-zinc-100 transition' href="">Suport</a>
+          <a className='text-zinc-400 hover:text-zinc-100 transition' href="">API</a>
+          <a className='text-zinc-400 hover:text-zinc-100 transition' href="">Documentation</a>
+          <a className='text-zinc-400 hover:text-zinc-100 transition' href="">Suport</a>
         </nav>
 
         <div className='flex items-center border-l border-white/10 pl-6 ml-6 gap-6'>

@@ -1,3 +1,4 @@
+import { NavLink } from "./NavLink";
 import { Logo } from "./icons/logo";
 
 export function Sidebar() {
@@ -10,7 +11,7 @@ export function Sidebar() {
           <strong className="text-zinc-100 font-medium text-sm">Guides</strong>
 
           <div className="text-sm flex flex-col pl-2">
-            <a className="px-4 py-1.5 border-l border-white/5 text-zinc-400 hover:text-white transition-colors" href="">Introduction</a>
+            <NavLink href="#" label="Introduction" />
           </div>
         </div>
         <div className="flex flex-col gap-4">
