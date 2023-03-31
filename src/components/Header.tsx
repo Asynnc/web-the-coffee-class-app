@@ -16,7 +16,7 @@ export function Header() {
         </nav>
 
         <div className='flex items-center border-l border-white/10 pl-6 ml-6 gap-6'>
-          <button> <Moon size={14} className='text-zinc-100 hover:text-orange-400 transition-colors' /> </button>
+          <button id="buttonTheme" title="Theme"> <Moon size={14} className='text-zinc-100 hover:text-orange-400 transition-colors'/> </button>
           <button className='border whitespace-nowrap border-cyan-800 bg-orange-400/10 text-orange-400 px-3 py-0.5 rounded-full text-sm font-medium hover:border-orange-400 transition-colors'> Sign in </button>
         </div>
       </div>

@@ -17,7 +17,9 @@ export function NavLink({ label, href, children }: NavLinkProps) {
     <Link
       data-active={activeHref === href}
       className="px-4 py-1.5 border-l border-white/5 text-zinc-400 hover:text-white transition-colors data-[active=true]:border-orange-400" 
-      href={href}>
+      href={href}
+      aria-label={label}
+      >
         {label || children}
         </Link>
   )
