@@ -87,7 +87,6 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                         <div className="flex mt-4" key={_id}>
                           <Image className="rounded-lg" src={`http://localhost:3001/uploads/${product.imagePath}`} alt={product.name} width="100" height="28" />
                           <span className="text-sm text-zinc-700 block min-w-5 ml-3">{quantity}x </span>
-
                           <div className="ml-1">
                             <strong className="block mb-1">{product.name}</strong>
                             <span className="text-sm text-zinc-700">{formatCurrency(product.price)}</span>
