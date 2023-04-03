@@ -18,4 +18,6 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+const withTM = require('next-transpile-modules')([], {debug: true})
+
+module.exports = withTM(nextConfig)
