@@ -1,6 +1,14 @@
-import { Moon, Search } from 'lucide-react'
+'use client'
+
+import { Moon, Search } from 'lucide-react';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 export function Header() {
+
+
+  const { data: session } = useSession()
+  console.log(session);
+
   return (
     <header className="fixed top-0 left-0 lg:left-80 right-0 px-8 py-3 border-b border-white/10 backdrop-blur flex items-center justify-between">
       <button className='w-full max-w-md flex items-center gap-3 text-xs text-zinc-400 bg-white/5 border rounded-full border-white/10 px-3 h-8'>
@@ -9,15 +17,23 @@ export function Header() {
       </button>
 
       <div className='flex items-center lg:flex'>
-        <nav className='text-sm hidden items-center gap-6 '>
-          <a className='text-zinc-400 hover:text-zinc-100 transition' href="">API</a>
-          <a className='text-zinc-400 hover:text-zinc-100 transition' href="">Documentation</a>
-          <a className='text-zinc-400 hover:text-zinc-100 transition' href="">Suport</a>
-        </nav>
+        {session?.user ? (
+          <nav className='text-sm hidden items-center gap-6 '>
+            <a className='text-zinc-400 hover:text-zinc-100 transition' href="">API</a>
+            <a className='text-zinc-400 hover:text-zinc-100 transition' href="">Documentation</a>
+            <a className='text-zinc-400 hover:text-zinc-100 transition' href="">Suport</a>
+          </nav>
+        ) : ('')}
 
         <div className='flex items-center border-l border-white/10 pl-6 ml-6 gap-6'>
-          <button id="buttonTheme" title="Theme"> <Moon size={14} className='text-zinc-100 hover:text-orange-400 transition-colors'/> </button>
-          <button className='border whitespace-nowrap border-cyan-800 bg-orange-400/10 text-orange-400 px-3 py-0.5 rounded-full text-sm font-medium hover:border-orange-400 transition-colors'> Sign in </button>
+          {session?.user ? (
+            <>
+            <button id="buttonTheme" title="Theme"> <Moon size={14} className='text-zinc-100 hover:text-orange-400 transition-colors' /> </button>
+            <button className='border whitespace-nowrap border-cyan-800 bg-orange-400/10 text-orange-400 px-3 py-0.5 rounded-full text-sm font-medium hover:border-orange-400 transition-colors' onClick={() => signOut()}> Sign out </button>
+            </>
+          ):(
+            <button className='border whitespace-nowrap border-cyan-800 bg-orange-400/10 text-orange-400 px-3 py-0.5 rounded-full text-sm font-medium hover:border-orange-400 transition-colors' onClick={() => signIn()}> Sign in </button>
+          )}
         </div>
       </div>
     </header>
