@@ -2,6 +2,8 @@
 
 import { OrderProps } from "@/types/Order";
 import { Tab } from "@headlessui/react";
+import { useState } from "react";
+import OrderModal from "./OrderModal";
 
 interface OrdersBoardsProps {
   icon?: string;
@@ -17,13 +19,31 @@ function classNames(...classes: any) {
 }
 
 export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDone }: OrdersBoardsProps) {
+
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedOrder, setSelectedOrder] = useState<null | OrderProps>();
+  const [isLoading, setIsLoading] = useState(false);
+
+  function handleOpenOrderModal(order: OrderProps) {
+    setSelectedOrder(order);
+    setIsModalVisible(true);
+  }
+
+  function handleCloseOrderModal() {
+    setIsLoading(true);
+    setIsModalVisible(false);
+    setIsLoading(false);
+    setSelectedOrder(null);
+  }
+
+
   return (
     <div className="w-full px-2 sm:px-0">
       <Tab.Group>
         <Tab.List className='flex space-x-1 rounded-xl bg-orange-900/20 p-1'>
           <Tab className={({ selected }) =>
             classNames(
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-400',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-orange-400 focus:outline-none focus:ring-2',
               selected
                 ? 'bg-white shadow'
@@ -32,7 +52,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
           }>WAITING</Tab>
           <Tab className={({ selected }) =>
             classNames(
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-400',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-orange-400 focus:outline-none focus:ring-2',
               selected
                 ? 'bg-white shadow'
@@ -41,7 +61,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
           }>IN PRODUCTION</Tab>
           <Tab className={({ selected }) =>
             classNames(
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-400',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-orange-400 focus:outline-none focus:ring-1',
               selected
                 ? 'bg-white shadow'
@@ -57,10 +77,10 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
             {
               ordersWaiting.map((order) => {
                 return (
-                  <ul>
-                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                  <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
+                    <li  className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
-                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
+                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
                         <li>&middot;</li>
                         <li>Número do pedido: {order._id}</li>
@@ -78,10 +98,10 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
             {
               ordersProduction.map((order) => {
                 return (
-                  <ul>
-                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                  <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
+                    <li  className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
-                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
+                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
                         <li>&middot;</li>
                         <li>Número do pedido: {order._id}</li>
@@ -99,10 +119,10 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
             {
               ordersDone.map((order) => {
                 return (
-                  <ul>
+                  <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
                     <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
-                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
+                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
                         <li>&middot;</li>
                         <li>Número do pedido: {order._id}</li>
@@ -115,6 +135,8 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
           </Tab.Panel>
         </Tab.Panels>
       </Tab.Group>
+
+      <OrderModal isVisible={isModalVisible} order={selectedOrder || null} onClose={handleCloseOrderModal}/>
     </div>
   )
 }
