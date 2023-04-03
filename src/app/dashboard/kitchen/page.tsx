@@ -10,6 +10,7 @@ export default async function Dashboard() {
     }
   })
 
+
   const orders = await response.json()
 
   const production = orders.filter((order: OrderProps) => order.status === 'IN_PRODUCTION');
