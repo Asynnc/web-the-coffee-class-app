@@ -23,7 +23,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
         <Tab.List className='flex space-x-1 rounded-xl bg-orange-900/20 p-1'>
           <Tab className={({ selected }) =>
             classNames(
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-400',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-orange-400 focus:outline-none focus:ring-2',
               selected
                 ? 'bg-white shadow'
@@ -32,7 +32,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
           }>WAITING</Tab>
           <Tab className={({ selected }) =>
             classNames(
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-400',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-orange-400 focus:outline-none focus:ring-2',
               selected
                 ? 'bg-white shadow'
@@ -41,7 +41,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
           }>IN PRODUCTION</Tab>
           <Tab className={({ selected }) =>
             classNames(
-              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-700',
+              'w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-orange-400',
               'ring-white ring-opacity-60 ring-offset-2 ring-offset-orange-400 focus:outline-none focus:ring-1',
               selected
                 ? 'bg-white shadow'
@@ -58,7 +58,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
               ordersWaiting.map((order) => {
                 return (
                   <ul>
-                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                    <li key={order._id} className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
                       <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
                         <li>Produtos: {order.products.length}</li>
@@ -79,7 +79,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
               ordersProduction.map((order) => {
                 return (
                   <ul>
-                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                    <li key={order._id} className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
                       <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
                         <li>Produtos: {order.products.length}</li>
@@ -100,7 +100,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
               ordersDone.map((order) => {
                 return (
                   <ul>
-                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                    <li key={order._id} className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
                       <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
                         <li>Produtos: {order.products.length}</li>
