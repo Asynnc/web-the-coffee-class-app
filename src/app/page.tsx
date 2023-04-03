@@ -18,7 +18,7 @@ export default function Home() {
       <h2 id="other-notes">Other Notes</h2>
       <p>Our application also allows you to customize the menu, adapting it to the needs and peculiarities of each establishment. In addition, all information is stored in a secure database, allowing access to reports and analyzes that can be used for future improvements.
       </p>
-      <p>We believe that this solution can add value to your customers and bring a more positive experience to your establishment's patrons, increasing satisfaction and loyalty.
+      <p>We believe that this solution can add value to your customers and bring a more positive experience to your establishments patrons, increasing satisfaction and loyalty.
       </p>
       <p>We remain at your disposal for further information and clarifications about our application.</p>
 
@@ -38,7 +38,6 @@ export default function Home() {
           ))}
         </dl>
       </div>
-      
     </main>
   )
 }
