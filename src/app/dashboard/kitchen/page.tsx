@@ -4,14 +4,17 @@ import { OrderProps } from "@/types/Order";
 
 export default async function Dashboard() {
 
+  // Force Delay Render
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
+
   const response = await fetch('http://localhost:3001/api/orders', {
     next: {
-      revalidate: 10,
-    }
+      revalidate: 1,
+    },
+    cache: 'no-store'
   })
 
-
-  const orders = await response.json()
+  const orders = await response.json();
 
   const production = orders.filter((order: OrderProps) => order.status === 'IN_PRODUCTION');
   const waiting = orders.filter((order: OrderProps) => order.status === 'WAITING');

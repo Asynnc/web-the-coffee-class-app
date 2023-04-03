@@ -62,7 +62,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     TABLE {order.table}
                   </Dialog.Title>
                   <div className="mt-2">
-                    <small className="text-sm text-gray-500">
+                    <small className="text-sm text-gray-600">
                       ORDER STATUS
                     </small>
                     <div className="flex">
@@ -82,10 +82,10 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                   <div className="mt-8">
                     <strong className="text-md font-medium opacity-8">Items</strong>
 
-                    <div className="mt-4">
+                    <div className="mt-4 overflow-y-auto">
                       {order.products.map(({ _id, product, quantity }) => (
                         <div className="flex mt-4" key={_id}>
-                          <Image className="rounded-1" src={`http://localhost:3001/uploads/${product.imagePath}`} alt={product.name} width="100" height="28" />
+                          <Image className="rounded-lg" src={`http://localhost:3001/uploads/${product.imagePath}`} alt={product.name} width="100" height="28" />
                           <span className="text-sm text-zinc-700 block min-w-5 ml-3">{quantity}x </span>
 
                           <div className="ml-1">

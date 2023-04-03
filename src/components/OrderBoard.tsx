@@ -80,7 +80,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
                   <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
                     <li  className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
-                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
+                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
                         <li>&middot;</li>
                         <li>Número do pedido: {order._id}</li>
@@ -101,7 +101,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
                   <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
                     <li  className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
-                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-500 list-none">
+                      <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
                         <li>&middot;</li>
                         <li>Número do pedido: {order._id}</li>
