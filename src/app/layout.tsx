@@ -1,5 +1,4 @@
 import { Sidebar } from '@/components/Sidebar';
-import './globals.css';
 
 import { HeroPattern } from '@/components/HeroPattern';
 import { Inter } from 'next/font/google';
