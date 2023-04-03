@@ -10,17 +10,17 @@ export function Sidebar() {
         <Image src={LogoIMG} alt="The Coffee Class Logo" className="-mt-4 cursor-pointer" role='presentation' onClick={() => window.location.href = '/'}/>
       <nav className="mt-10 flex flex-col gap-6">
         <div className="flex flex-col gap-4">
-          <strong className="text-zinc-100 font-medium text-sm">Guides</strong>
+          <strong className="text-zinc-100 font-medium text-sm">General</strong>
 
           <div className="text-sm flex flex-col pl-2">
-            <NavLink href="/dashboard/1" label="Introduction" />
+            <NavLink href="/dashboard" label="Home" />
           </div>
         </div>
         <div className="flex flex-col gap-4">
           <strong className="text-zinc-100 font-medium text-sm">Resources</strong>
 
           <div className="text-sm flex flex-col pl-2">
-            <NavLink href="/dashboard/2" label="Something" />
+            <NavLink href="/dashboard/kitchen" label="Kitchen"/>
           </div>
         </div>
       </nav>
