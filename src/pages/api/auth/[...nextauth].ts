@@ -11,21 +11,21 @@ export default NextAuth({
       // e.g. domain, username, password, 2FA token, etc.
       // You can pass any HTML attribute to the <input> tag through the object.
       credentials: {
-        email: { label: "E-mail", type: "text", placeholder: "user@example.com" },
-        senha: { label: "Password", type: "password" }
+        email: { label: "Email", type: "text", placeholder: "user@example.com" },
+        password: { label: "Password", type: "password" }
       },
       async authorize(credentials, req) {
         // Add logic here to look up the user from the credentials supplied
         // const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
 
-        const response = await fetch('http://localhost:3335/api/auth', {
+        const response = await fetch('http://localhost:3001/api/auth', {
           method: 'POST',
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            user: credentials?.email,
-            password: credentials?.senha
+            email: credentials?.email,
+            password: credentials?.password
           })
         })
 

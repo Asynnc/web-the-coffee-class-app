@@ -25,7 +25,6 @@ export default function RootLayout({
           <div className='lg:ml-80 relative h-screen'>
             <Header />
             <HeroPattern />
-
             <div className='py-24 max-w-4xl px-8 mx-auto'>
               {children}
             </div>
