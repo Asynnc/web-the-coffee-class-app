@@ -22,7 +22,7 @@ export function Sidebar() {
                   <strong className="text-zinc-100 font-medium text-sm">{element.label}</strong>
                   {element.children && (
                     element.children.map((child) => (
-                      <NavLink key={child.label} href={child.href as any} label={child.label} />
+                      <NavLink key={child.label} href={String(child.href)} label={child.label} />
                     ))
                   )}
                 </>
