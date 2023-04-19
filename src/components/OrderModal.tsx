@@ -16,7 +16,6 @@ interface OrderModalProps {
   isLoading?: boolean;
 }
 
-
 export default function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
 
   if (!isVisible || !order) {
@@ -26,6 +25,16 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
   const total = order.products.reduce((total, { product, quantity }) => {
     return total + (product.price * quantity);
   }, 0);
+
+  const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
+    await fetch(`http://localhost:3001/api/orders/${id}`, {
+      method: 'DELETE',
+    })
+  }
+
+  // const changeOrderStatus = async (): Promise<void> => {
+
+  // }
 
   return (
     <>
@@ -67,9 +76,9 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     </small>
                     <div className="flex">
                       <span className="text-small">
-                        {order.status === 'WAITING' && <Clock3 fill="gray"/>}
-                        {order.status === 'IN_PRODUCTION' && <Flame fill='red'/>}
-                        {order.status === 'DONE' && <CheckCircle2 fill="green"/>}
+                        {order.status === 'WAITING' && <Clock3 fill="gray" />}
+                        {order.status === 'IN_PRODUCTION' && <Flame fill='red' />}
+                        {order.status === 'DONE' && <CheckCircle2 fill="green" />}
                       </span>
                       <strong className="ml-2">
                         {order.status === 'WAITING' && 'WAITING'}
@@ -106,7 +115,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-transparent px-4 py-2 text-sm font-medium text-black hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-                      onClick={onClose}
+                      onClick={() => cancelOrder(order._id)}
                     >
                       CANCEL ORDER
                     </button>

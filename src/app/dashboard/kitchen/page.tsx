@@ -2,18 +2,12 @@ import OrdersBoard from "@/components/OrderBoard";
 import PageTitle from "@/components/PageTitle";
 import { OrderProps } from "@/types/Order";
 
-const getOrders = async (): Promise<OrderProps[]> => {
+export const getOrders = async (): Promise<OrderProps[]> => {
   const data = await fetch('http://localhost:3001/api/orders', {
     cache: 'no-store'
   });
   return data.json()
 }
-
-// const handleCancelOrder = async (id: OrderProps['_id']): Promise<void> => {
-//   await fetch(`http://localhost:3001/api/orders/${id}`, {
-//     method: 'DELETE',
-//   })
-// }
 
 export default async function Orders() {
 
