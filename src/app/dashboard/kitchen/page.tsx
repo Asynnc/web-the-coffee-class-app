@@ -2,9 +2,12 @@ import OrdersBoard from "@/components/OrderBoard";
 import PageTitle from "@/components/PageTitle";
 import { OrderProps } from "@/types/Order";
 
-export const getOrders = async (): Promise<OrderProps[]> => {
+const getOrders = async (): Promise<OrderProps[]> => {
   const data = await fetch('http://localhost:3001/api/orders', {
-    cache: 'no-store'
+    next: {
+      revalidate: 1
+    },
+    cache: 'no-cache'
   });
   return data.json()
 }

@@ -7,7 +7,7 @@ import LogoIMG from "../assets/images/banners/3.svg";
 import { NavLink } from "./NavLink";
 
 export function Sidebar() {
-  
+
   const { data: session } = useSession()
 
   return (

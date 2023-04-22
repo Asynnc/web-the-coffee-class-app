@@ -19,6 +19,16 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: 'Kitchen',
     children: [
       {
+        label: 'Products',
+        subLabel: 'An information management tool of all products.',
+        href: '/dashboard/products',
+      },
+      {
+        label: 'Recipes',
+        subLabel: 'An information management tool of all recipes.',
+        href: '/dashboard/recipes',
+      },
+      {
         label: 'Orders',
         subLabel: 'An information management tool of all orders.',
         href: '/dashboard/kitchen',

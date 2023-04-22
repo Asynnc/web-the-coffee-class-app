@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import BannerImage from '../assets/images/banners/3.svg'
+
 export default function Home() {
 
   const features = [
@@ -12,6 +15,7 @@ export default function Home() {
       <h1 id="presentation">Presentation</h1>
       <p>We would like to present our proposal for an application that aims to improve the experience of customers in restaurants, offering agility in the service of waiters and allowing customers to follow the status of the preparation of their orders in real time.
       </p>
+      <Image src={BannerImage} alt={'Banner The Coffe Class'} width={1000} priority />
       <h2 id="project-description">Project Description</h2>
       <p>Our application has an intuitive and easy-to-use interface, allowing waiters to receive orders from customers quickly and conveniently, without the need for paper and pen, reducing errors and optimizing time. Customers, in turn, can follow the preparation status of their orders in real time, avoiding the anxiety and uncertainty that often occur during the process.
       </p>
@@ -28,7 +32,6 @@ export default function Home() {
           The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated
           steel divider separates active cards from new ones, or can be used to archive important task lists.
         </p>
-
         <dl className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
           {features.map((feature) => (
             <div key={feature.name} className="border-t border-gray-200 pt-4">
