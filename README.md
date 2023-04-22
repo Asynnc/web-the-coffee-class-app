@@ -91,7 +91,7 @@ See the [open issues](https://github.com/Asynnc/dashboard-ui-tailwindcss/issues)
 ---
  <table>
   <tr>
-    <td align="center"><a href="https://github.com/Lucianjfc"><img src="https://avatars.githubusercontent.com/u/54373473?v=4" width="100px;" alt=""/><br /><sub><b>Antonio Silva</b></sub></a><br /><a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/commits?author=Tonybsilva-dev" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3ATonybsilva-dev" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/Lucianjfc"><img src="https://avatars.githubusercontent.com/u/54373473?v=4" width="100px;" alt=""/><br /><sub><b>Antonio Silva</b></sub></a><br /><a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/commits?author=Tonybsilva-dev" title="Documentation">📖</a> <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/pulls?q=is%3Apr+reviewed-by%3ATonybsilva-dev" title="Reviewed Pull Requests">👀</a></td>
  </tr>
 </table>
 
@@ -101,7 +101,7 @@ See the [open issues](https://github.com/Asynnc/dashboard-ui-tailwindcss/issues)
 
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/EraserNode"><img src="https://avatars.githubusercontent.com/u/98472624?v=4" width="100px;" alt=""/><br /><sub><b>Eraser Node</b></sub></a><br /><a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/commits?author=EraserNode" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3AEraserNode" title="Reviewed Pull Requests">👀</a></td>
+    <td align="center"><a href="https://github.com/EraserNode"><img src="https://avatars.githubusercontent.com/u/98472624?v=4" width="100px;" alt=""/><br /><sub><b>Eraser Node</b></sub></a><br /><a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/commits?author=EraserNode" title="Documentation">📖</a> <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/pulls?q=is%3Apr+reviewed-by%3AEraserNode" title="Reviewed Pull Requests">👀</a></td>
 
   </tr>
 </table>
