@@ -28,7 +28,7 @@
     <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/issues">View Demo</a>
+    <a href="https://the-coffee-class.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/issues">Report Bug</a>
     ·
