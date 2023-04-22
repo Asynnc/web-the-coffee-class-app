@@ -17,13 +17,13 @@
 <br />
 <p align="center">
   <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss">
-    <img src="https://i.imgur.com/Gc44Lrq.png" alt="Logo">
+    <img src="https://i.imgur.com/9VIqQTV.png" alt="Logo">
   </a>
 
   <h3 align="center">The Coffee Class</h3>
 
   <p align="center">
-    Your search engine for "Political Doings" in your city
+    Your (OMS) personal order management system.
     <br />
     <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/"><strong>Explore the docs »</strong></a>
     <br />
@@ -95,15 +95,26 @@ See the [open issues](https://github.com/Asynnc/dashboard-ui-tailwindcss/issues)
  </tr>
 </table>
 
+### Contributors
+
+---
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/EraserNode"><img src="https://avatars.githubusercontent.com/u/98472624?v=4" width="100px;" alt=""/><br /><sub><b>Eraser Node</b></sub></a><br /><a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/commits?author=EraserNode" title="Documentation">📖</a> <a href="https://github.com/all-contributors/all-contributors/pulls?q=is%3Apr+reviewed-by%3AEraserNode" title="Reviewed Pull Requests">👀</a></td>
+
+  </tr>
+</table>
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/Tonybsilva-dev/Peoplelitics.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/Asynnc/dashboard-ui-tailwindcss.svg?style=for-the-badge
 [contributors-url]: https://github.com/Asynnc/dashboard-ui-tailwindcss/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Tonybsilva-dev/Peoplelitics.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/Asynnc/dashboard-ui-tailwindcss.svg?style=for-the-badge
 [forks-url]: https://github.com/Asynnc/dashboard-ui-tailwindcss/network/members
-[stars-shield]: https://img.shields.io/github/stars/Tonybsilva-dev/Peoplelitics.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Asynnc/dashboard-ui-tailwindcss.svg?style=for-the-badge
 [stars-url]: https://github.com/Asynnc/dashboard-ui-tailwindcss/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Tonybsilva-dev/Peoplelitics.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Asynnc/dashboard-ui-tailwindcss.svg?style=for-the-badge
 [issues-url]: https://github.com/Asynnc/dashboard-ui-tailwindcss/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/tony-silva/
