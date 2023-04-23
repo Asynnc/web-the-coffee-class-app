@@ -6,6 +6,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { CheckCircle2, Clock3, Flame } from "lucide-react";
 import Image from "next/image";
 import { Fragment } from "react";
+import ImageNotAvaliable from '../../public/image_not_available.png';
 
 interface OrderModalProps {
   isVisible: boolean;
@@ -96,7 +97,11 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     <div className="mt-4 overflow-y-auto">
                       {order.products.map(({ _id, product, quantity }) => (
                         <div className="flex mt-4" key={_id}>
-                          <Image className="rounded-lg" src={`http://localhost:3001/uploads/${product.imagePath}` || '/image_not_available.png'} alt={product.name} width="100" height="28" />
+                          {product.imagePath ? (
+                            <Image className="rounded-lg" src={`http://localhost:3001/uploads/${product.imagePath}`} placeholder="blur" blurDataURL="https://i.imgur.com/PPacRgY.png" alt={product.name} width="100" height="28" />
+                          ) : (
+                            <Image className="rounded-lg" src={ImageNotAvaliable} alt={product.name} width="100" height="28" />
+                          )}
                           <span className="text-sm text-zinc-700 block min-w-5 ml-3">{quantity}x </span>
                           <div className="ml-1">
                             <strong className="block mb-1">{product.name}</strong>

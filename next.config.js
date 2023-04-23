@@ -20,7 +20,7 @@ const nextConfig = {
         hostname: 'localhost',
         port: '3001',
         pathname: '/uploads/**',
-      },
+      }
     ],
   },
 }
