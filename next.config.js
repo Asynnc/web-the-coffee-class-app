@@ -3,6 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
+    SECRET: "2311869cc33e745422590b5f81aedc2b",
     GITHUB_ID: "6a9183d11ec0a5e68b09",
     GITHUB_SECRET: "dcfbf1bca3a0b5ae09b8f0826b38840356f8737d",
     NEXTAUTH_URL: "http://localhost:3000",
@@ -14,13 +15,15 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    minimumCacheTTL: 60,
+    domains: ['https://imgur.com/'],
     remotePatterns: [
       {
         protocol: 'http',
         hostname: 'localhost',
         port: '3001',
         pathname: '/uploads/**',
-      },
+      }
     ],
   },
 }
