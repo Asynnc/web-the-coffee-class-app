@@ -80,6 +80,8 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 > Comming Soon
 
+> Api Colletion - [Insomnia](https://we.tl/t-pB9wICM014)
+
 <!-- ROADMAP -->
 ## Roadmap
 
