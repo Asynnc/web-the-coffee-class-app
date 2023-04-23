@@ -5,4 +5,6 @@ export interface OrderProps {
   table: string;
   status: 'WAITING' | 'IN_PRODUCTION' | 'DONE';
   products: Array<ProductProps>
+  createdAt: Date | string;
+  __v: number;
 }

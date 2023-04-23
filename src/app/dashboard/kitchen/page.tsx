@@ -1,17 +1,25 @@
 import OrdersBoard from "@/components/OrderBoard";
 import PageTitle from "@/components/PageTitle";
+import { ordersMock } from "@/mocks/order";
 import { OrderProps } from "@/types/Order";
 
-const getOrders = async (): Promise<OrderProps[]> => {
+const getOrders = async (): Promise<OrderProps[] | any> => {
 
-  const data = await fetch('http://localhost:3001/api/orders', {
-    next: {
-      revalidate: 1
-    },
-    cache: 'no-cache'
-  });
+  // http://localhost:3001/api/orders
 
-  return data.json()
+  try {
+    const data = await fetch('http://localhost:3001/api/orders', {
+      next: {
+        revalidate: 1
+      },
+      cache: 'no-cache'
+    });
+
+    return data.json()
+  } catch (error) {
+    console.log(error)
+    return ordersMock
+  }
 }
 
 export default async function Orders() {
