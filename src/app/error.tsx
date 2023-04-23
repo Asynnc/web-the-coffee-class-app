@@ -11,7 +11,7 @@ export default function Error({ error, reset, }: { error: Error; reset: () => vo
   return (
     <main className="prose prose-invert prose-headings:text-zinc-100 prose-headings:font-semibold prose-h1:text-3xl m-auto">
       <h2>Something went wrong!</h2>
-      <button onClick={() => reset()} >
+      <button className='border whitespace-nowrap border-cyan-800 bg-orange-400/10 text-orange-400 px-3 py-0.5 rounded-full text-sm font-medium hover:border-orange-400 transition-colors' onClick={() => reset()} >
         Try again
       </button>
     </main>

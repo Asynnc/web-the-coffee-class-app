@@ -3,18 +3,24 @@ import PageTitle from "@/components/PageTitle";
 import { OrderProps } from "@/types/Order";
 
 const getOrders = async (): Promise<OrderProps[]> => {
+
   const data = await fetch('http://localhost:3001/api/orders', {
     next: {
       revalidate: 1
     },
     cache: 'no-cache'
   });
+
   return data.json()
 }
 
 export default async function Orders() {
 
   const orders = await getOrders()
+
+  if (!orders) {
+    return null
+  }
 
   const production = orders.filter((order: OrderProps) => order.status === 'IN_PRODUCTION');
   const waiting = orders.filter((order: OrderProps) => order.status === 'WAITING');
