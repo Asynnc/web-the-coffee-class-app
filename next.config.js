@@ -15,6 +15,8 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    minimumCacheTTL: 60,
+    domains: ['https://imgur.com/'],
     remotePatterns: [
       {
         protocol: 'http',
