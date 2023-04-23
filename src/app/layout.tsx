@@ -1,10 +1,9 @@
-import { Sidebar } from '@/components/Sidebar';
-import './globals.css';
-
 import { HeroPattern } from '@/components/HeroPattern';
+import { Sidebar } from '@/components/Sidebar';
 import { Inter } from 'next/font/google';
 import { Header } from '../components/Header';
 import Provider from './Provider';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +13,9 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
 }) {
   return (
     <html lang="pt-BR" className={inter.className}>
@@ -26,7 +25,6 @@ export default function RootLayout({
           <div className='lg:ml-80 relative h-screen'>
             <Header />
             <HeroPattern />
-
             <div className='py-24 max-w-4xl px-8 mx-auto'>
               {children}
             </div>

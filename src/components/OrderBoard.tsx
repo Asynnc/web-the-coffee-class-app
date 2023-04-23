@@ -36,7 +36,6 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
     setSelectedOrder(null);
   }
 
-
   return (
     <div className="w-full px-2 sm:px-0">
       <Tab.Group>
@@ -78,7 +77,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
               ordersWaiting.map((order) => {
                 return (
                   <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
-                    <li  className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
                       <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
@@ -99,7 +98,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
               ordersProduction.map((order) => {
                 return (
                   <ul key={order._id} onClick={() => handleOpenOrderModal(order)}>
-                    <li  className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
+                    <li className="relative rounded-md p-3 hover:bg-orange-500/10 list-none cursor-pointer">
                       <h4 className="text-sm font-medium leading-5">MESA {order.table}</h4>
                       <ul className="mt-1 flex space-x-1 text-xs font-normal leading-4 text-gray-400 list-none">
                         <li>Produtos: {order.products.length}</li>
@@ -136,7 +135,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
         </Tab.Panels>
       </Tab.Group>
 
-      <OrderModal isVisible={isModalVisible} order={selectedOrder || null} onClose={handleCloseOrderModal}/>
+      <OrderModal isVisible={isModalVisible} order={selectedOrder || null} onClose={handleCloseOrderModal} />
     </div>
   )
 }

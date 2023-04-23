@@ -4,15 +4,27 @@ declare module "next-auth" {
   interface Session {
     user: {
       "user": {
-        "id": string,
-        "nome": string,
+        "_id": string,
+        "name": string,
+        "userName"?: string,
         "email": string,
-        "avatar": null | string,
-        "ativo": boolean,
-        "tipo": string,
-        "ultimo_login": Date,
-        "created_at": Date,
-        "updated_at": Date
+        "password": string,
+        "avatar"?: null | string,
+        "document"?: boolean,
+        "address"?: {
+          "street"?: string,
+          "suite"?: string,
+          "city"?: string,
+          "zipcode"?: string,
+          "phone"?: string,
+          "geo"?: {
+            "lat"?: string,
+            "lng"?: string
+          }
+        },
+        "isActive"?: Boolean,
+        "createdAt": Date,
+        "updatedAt": Date
       },
       "token": string
     }
