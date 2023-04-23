@@ -16,7 +16,6 @@ interface OrderModalProps {
   isLoading?: boolean;
 }
 
-
 export default function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
 
   if (!isVisible || !order) {
@@ -26,6 +25,18 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
   const total = order.products.reduce((total, { product, quantity }) => {
     return total + (product.price * quantity);
   }, 0);
+
+  const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
+    await fetch(`http://localhost:3001/api/orders/${id}`, {
+      method: 'DELETE',
+    }).then(
+      () => onClose()
+    )
+  }
+
+  // const changeOrderStatus = async (): Promise<void> => {
+
+  // }
 
   return (
     <>
@@ -67,9 +78,9 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     </small>
                     <div className="flex">
                       <span className="text-small">
-                        {order.status === 'WAITING' && <Clock3 fill="gray"/>}
-                        {order.status === 'IN_PRODUCTION' && <Flame fill='red'/>}
-                        {order.status === 'DONE' && <CheckCircle2 fill="green"/>}
+                        {order.status === 'WAITING' && <Clock3 fill="gray" />}
+                        {order.status === 'IN_PRODUCTION' && <Flame fill='red' />}
+                        {order.status === 'DONE' && <CheckCircle2 fill="green" />}
                       </span>
                       <strong className="ml-2">
                         {order.status === 'WAITING' && 'WAITING'}
@@ -81,13 +92,11 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
 
                   <div className="mt-8">
                     <strong className="text-md font-medium opacity-8">Items</strong>
-
                     <div className="mt-4 overflow-y-auto">
                       {order.products.map(({ _id, product, quantity }) => (
                         <div className="flex mt-4" key={_id}>
                           <Image className="rounded-lg" src={`http://localhost:3001/uploads/${product.imagePath}`} alt={product.name} width="100" height="28" />
                           <span className="text-sm text-zinc-700 block min-w-5 ml-3">{quantity}x </span>
-
                           <div className="ml-1">
                             <strong className="block mb-1">{product.name}</strong>
                             <span className="text-sm text-zinc-700">{formatCurrency(product.price)}</span>
@@ -96,7 +105,6 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                       ))}
                     </div>
                   </div>
-
                   <div className="flex items-center justify-between mt-6">
                     <span className="text-sm font-medium opacity-8">Total</span>
                     <strong>{formatCurrency(total)}</strong>
@@ -107,7 +115,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     <button
                       type="button"
                       className="inline-flex justify-center rounded-md border border-transparent bg-transparent px-4 py-2 text-sm font-medium text-black hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-                      onClick={onClose}
+                      onClick={() => cancelOrder(order._id)}
                     >
                       CANCEL ORDER
                     </button>

@@ -10,9 +10,7 @@ export default function PageTitle({ title, description, children }: PageTitlePro
     <>
       <section>
         <div className="mx-auto px-4 sm:container">
-          <div
-            className="items-center justify-between md:flex"
-          >
+          <div className="items-center justify-between md:flex">
             <div className="mb-6 w-full">
               <h1 className="mb-1 text-2xl font-semibold">
                 {title}

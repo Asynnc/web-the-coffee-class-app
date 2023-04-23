@@ -1,7 +1,4 @@
-
-
-
-export default function Auth(){
+export default function Auth() {
   return (
     <div>
       <h1>Auth</h1>
