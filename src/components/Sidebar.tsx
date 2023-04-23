@@ -26,7 +26,7 @@ export function Sidebar() {
                     ))
                   )}
                 </>
-              ))) : ('')}
+              ))) : (null)}
           </div>
         </div>
       </nav>

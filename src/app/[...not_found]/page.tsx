@@ -1,4 +1,5 @@
 'use client'
+
 export default function NotFound() {
   return (
     <main className="prose prose-invert prose-headings:text-zinc-100 prose-headings:font-semibold prose-h1:text-3xl m-auto">
