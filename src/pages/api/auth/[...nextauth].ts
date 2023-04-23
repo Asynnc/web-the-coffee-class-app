@@ -1,5 +1,7 @@
 import NextAuth from 'next-auth';
 import CredentialsProvider from "next-auth/providers/credentials";
+import GitHubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 
 export default NextAuth({
   providers: [
@@ -31,7 +33,7 @@ export default NextAuth({
 
         const user = await response.json();
 
-        if (user) {
+        if (response.ok && user) {
           // Any object returned will be saved in `user` property of the JWT
           return user
         } else {
@@ -41,8 +43,19 @@ export default NextAuth({
           // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
         }
       }
+    }),
+    GoogleProvider({
+      clientId: String(process.env.GOOGLE_CLIENT_ID),
+      clientSecret: String(process.env.GOOGLE_CLIENT_SECRET)
+    }),
+    GitHubProvider({
+      clientId: String(process.env.GITHUB_ID),
+      clientSecret: String(process.env.GITHUB_SECRET)
     })
   ],
+  session: {
+    strategy: 'jwt'
+  },
   callbacks: {
     async jwt({ token, user }) {
       return { ...token, ...user }
