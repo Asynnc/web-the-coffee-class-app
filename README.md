@@ -25,7 +25,7 @@
   <p align="center">
     Your (OMS) personal order management system.
     <br />
-    <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/"><strong>Explore the docs »</strong></a>
+    <a href="https://tonybsilvadev.gitbook.io/the-coffee-class/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://the-coffee-class.vercel.app/">View Demo</a>
