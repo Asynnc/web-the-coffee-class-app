@@ -21,7 +21,7 @@ export default NextAuth({
         // Add logic here to look up the user from the credentials supplied
         // const user = { id: "1", name: "J Smith", email: "jsmith@example.com" }
 
-        const response = await fetch('http://localhost:3001/api/auth', {
+        const response = await fetch('http://213.136.81.169:3001/api/auth', {
           method: 'POST',
           headers: {
             "Content-Type": "application/json"
