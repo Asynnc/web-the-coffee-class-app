@@ -1,3 +1,4 @@
+import { Widget } from '@/components/FeedbackWidget';
 import { HeroPattern } from '@/components/HeroPattern';
 import { Sidebar } from '@/components/Sidebar';
 import { Inter } from 'next/font/google';
@@ -28,6 +29,7 @@ export default function RootLayout({
             <div className='py-24 max-w-4xl px-8 mx-auto'>
               {children}
             </div>
+            <Widget />
           </div>
         </Provider>
       </body>
