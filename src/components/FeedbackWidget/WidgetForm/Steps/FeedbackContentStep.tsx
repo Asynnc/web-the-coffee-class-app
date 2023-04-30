@@ -27,7 +27,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
     setIsSendingFeedback(true)
     e.preventDefault()
 
-    await axios.post('http://213.136.81.169:3001/api/feedbacks', {
+    await axios.post(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/feedbacks`, {
       type: feedbackType,
       comment,
       screenshot
