@@ -23,9 +23,16 @@ const nextConfig = {
         hostname: 'localhost',
         port: '3001',
         pathname: '/uploads/**',
-      }, {
+      },
+      {
         protocol: 'https',
         hostname: 'the-coffee-class.s3.amazonaws.com',
+        port: '',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.the-coffee-class.com.br',
         port: '',
         pathname: '/**',
       }
