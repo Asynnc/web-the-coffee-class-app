@@ -11,8 +11,7 @@ const getOrders = async (): Promise<OrderProps[] | any> => {
     const data = await fetch('http://213.136.81.169:3001/api/orders', {
       next: {
         revalidate: 1
-      },
-      cache: 'no-cache'
+      }
     });
 
     return data.json()
