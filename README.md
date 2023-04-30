@@ -28,7 +28,7 @@
     <a href="https://tonybsilvadev.gitbook.io/the-coffee-class/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://the-coffee-class.vercel.app/">View Demo</a>
+    <a href="https://app.the-coffee-class.com.br/">View Demo</a>
     ·
     <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/issues">Report Bug</a>
     ·
@@ -77,10 +77,9 @@ This is an example of how to list things you need to use the software and how to
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
 -->
-_For more examples, please refer to the [Documentation](https://example.com)_
-> Comming Soon
+_For more examples, please refer to the [Documentation](https://tonybsilvadev.gitbook.io/the-coffee-class/)_
 
-> Api Colletion - [Insomnia](https://we.tl/t-pB9wICM014)
+_Api Colletion - [Insomnia](https://we.tl/t-pB9wICM014)_
 
 <!-- ROADMAP -->
 ## Roadmap
