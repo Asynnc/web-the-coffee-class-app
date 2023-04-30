@@ -33,8 +33,9 @@ export function ScreenshotButton({ screenshot, onScreenshotTook }: ScreenshotBut
 
   return (
     <button
+      disabled
       type='button'
-      title='Tirar print da tela'
+      title='Screenshot temporarily disabled.'
       aria-label='Tirar print da tela'
       onClick={handleTakeScreenshot}
       className='p-2 bg-zinc-800 rounded-md border-transparent hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors duration-200 ease-in-out'

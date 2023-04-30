@@ -10,15 +10,15 @@ export function Widget() {
       <Popover.Panel><WidgetForm /></Popover.Panel>
 
       <Popover.Button
-        title='FeedBack'
-        aria-label='FeedBack'
+        title='Feedback'
+        aria-label='Feedback'
         className='bg-brand-500 rounded-full px-3 h-12 text-white flex items-center group shadow-[0_0.5rem_1.5rem_#e5b85740]'
       >
-        <ChatTeardropDots className='w-6 h-6' />
+        <ChatTeardropDots className='w-6 h-6' fill='orange' />
 
         <span className='max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-linear'>
           <span className='pl-2' />
-          FeedBack
+          Feedback
         </span>
       </Popover.Button>
     </Popover>
