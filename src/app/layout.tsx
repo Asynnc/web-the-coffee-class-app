@@ -1,6 +1,7 @@
 import { Widget } from '@/components/FeedbackWidget';
 import { HeroPattern } from '@/components/HeroPattern';
 import { Sidebar } from '@/components/Sidebar';
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
 import { Header } from '../components/Header';
 import Provider from './Provider';
@@ -32,6 +33,7 @@ export default function RootLayout({
             <Widget />
           </div>
         </Provider>
+        <Analytics />
       </body>
     </html>
   )
