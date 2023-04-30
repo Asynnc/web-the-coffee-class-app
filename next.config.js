@@ -16,7 +16,7 @@ const nextConfig = {
   },
   images: {
     minimumCacheTTL: 60,
-    domains: ['https://imgur.com/', 'http://213.136.81.169:3001/', 'the-coffee-class.s3.amazonaws.com'],
+    domains: ['https://imgur.com/', 'https://api.the-coffee-class.com.br/', 'the-coffee-class.s3.amazonaws.com'],
     remotePatterns: [
       {
         protocol: 'http',

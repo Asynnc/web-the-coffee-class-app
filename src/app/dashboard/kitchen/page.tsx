@@ -8,7 +8,7 @@ const getOrders = async (): Promise<OrderProps[] | any> => {
   // http://localhost:3001/api/orders
 
   try {
-    const data = await fetch('http://213.136.81.169:3001/api/orders', {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/orders`, {
       next: {
         revalidate: 1
       }
