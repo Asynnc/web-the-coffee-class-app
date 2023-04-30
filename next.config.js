@@ -16,7 +16,7 @@ const nextConfig = {
   },
   images: {
     minimumCacheTTL: 60,
-    domains: ['https://imgur.com/'],
+    domains: ['https://imgur.com/', 'http://213.136.81.169:3001'],
     remotePatterns: [
       {
         protocol: 'http',
