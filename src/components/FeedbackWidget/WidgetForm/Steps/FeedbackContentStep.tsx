@@ -71,7 +71,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
             title='Send feedback'
             aria-labelledby='Send feedback'
             disabled={comment.length === 0 || isSendingFeedback}
-            className='p-2 bg-zinc-800 rounded-md border-transparent text-white flex flex-1 justify-center items-center text-sm hover:bg-brand-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-brand-500 transition-colors duration-200 ease-in-out disabled:opacity-50 disabled:hover:bg-zinc-500'
+            className='p-2 bg-zinc-800 rounded-md border-transparent text-white flex flex-1 justify-center items-center text-sm hover:bg-orange-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-zinc-900 focus:ring-orange-500 transition-colors duration-200 ease-in-out disabled:opacity-50 disabled:hover:bg-zinc-500'
           >{isSendingFeedback ? <Loading /> : 'Send feedback'}</button>
         </footer>
       </form>
