@@ -1,6 +1,6 @@
 'use client'
 
-import api from '@/lib/api'
+import axios from 'axios'
 import Image from 'next/image'
 import { ArrowLeft } from 'phosphor-react'
 import { FormEvent, useState } from 'react'
@@ -27,7 +27,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
     setIsSendingFeedback(true)
     e.preventDefault()
 
-    await api.post('/feedbacks', {
+    await axios.post('http://213.136.81.169:3001/api/feedbacks', {
       type: feedbackType,
       comment,
       screenshot
