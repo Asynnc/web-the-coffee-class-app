@@ -60,7 +60,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
         <textarea
           onChange={e => setComment(e.target.value)}
           placeholder='Tell us in detail whats going on...'
-          className='md:min-w-[304px] w-full min-h-[112px] p-4 text-sm placeholder-zinc-400 text-zinc-100 border-black bg-transparent rounded-md focus:border-brand-500 focus:ring-brand-500 focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin'
+          className='md:min-w-[304px] w-full min-h-[112px] p-4 text-sm placeholder-zinc-400 text-zinc-100 border-black bg-transparent rounded-md focus:border-white focus:ring-white focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin'
         />
 
         <footer className='flex gap-2 mt-2'>
