@@ -95,7 +95,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
                     <div className="mt-4 overflow-y-auto">
                       {order.products.map(({ _id, product, quantity }) => (
                         <div className="flex mt-4" key={_id}>
-                          <Image className="rounded-lg" src={`https://the-coffee-class.s3.amazonaws.com/${product.imagePath}`} alt={product.name} width="100" height="28" />
+                          <Image className="rounded-lg" src={`https://the-coffee-class.s3.amazonaws.com/${product.imagePath}`} alt={product.name} width="100" height="28" priority />
                           <span className="text-sm text-zinc-700 block min-w-5 ml-3">{quantity}x </span>
                           <div className="ml-1">
                             <strong className="block mb-1">{product.name}</strong>
