@@ -1,49 +1,40 @@
-'use client'
+import OrdersBoard from "@/components/Old/OrderBoard";
+import PageTitle from "@/components/PageTitle";
+import { ordersMock } from "@/mocks/order";
+import { OrderProps } from "@/types/Order";
 
-import api from '@/lib/api';
-import { OrderProps } from '@/types/Order';
-import { useEffect, useState } from 'react';
-import socketIO from 'socket.io-client';
+const getOrders = async (): Promise<OrderProps[] | any> => {
 
-export function Orders() {
+  // http://localhost:3001/api/orders
 
-  const [orders, setOrders] = useState<OrderProps[]>([]);
-
-  useEffect(() => {
-    const socket = socketIO('https://api.the-coffee-class.com.br/api', {
-      transports: ['websocket'],
+  try {
+    const data = await fetch(`api.the-coffee-class.com.br/api/orders`, {
+      next: {
+        revalidate: 1
+      }
     });
 
-    socket.on('orders@new', (order) => {
-      setOrders(prevState => prevState.concat(order));
-    });
-  }, []);
-
-  useEffect(() => {
-    api.get('/orders').then((response) => setOrders(response.data));
-  }, []);
-
-  const production = orders.filter((order) => order.status === 'IN_PRODUCTION');
-  const waiting = orders.filter((order) => order.status === 'WAITING');
-  const done = orders.filter((order) => order.status === 'DONE');
-
-  function handleCancelOrder(orderID: string) {
-    setOrders((prevState) => prevState.filter((order) => order._id !== orderID));
+    return data.json()
+  } catch (error) {
+    console.log(error)
+    return ordersMock
   }
+}
 
-  function handleOrderStatusChange(orderID: string, status: OrderProps['status']) {
-    setOrders((prevState) => prevState.map((order) => (
-      order._id === orderID
-        ? { ...order, status }
-        : order
-    )));
+export default async function Orders() {
+  const orders = await getOrders()
+  if (!orders) {
+    return null
   }
-
+  const production = orders.filter((order: OrderProps) => order.status === 'IN_PRODUCTION');
+  const waiting = orders.filter((order: OrderProps) => order.status === 'WAITING');
+  const done = orders.filter((order: OrderProps) => order.status === 'DONE');
   return (
-    <div className=' w-full max-w:md m-10-auto flex gap-6'>
-      {/* <OrdersBoards icon='⏱️' title='Fila de espera' orders={waiting} onCancelOrder={handleCancelOrder} onChangeOrderStatus={handleOrderStatusChange} />
-      <OrdersBoards icon='🔥' title='Em produção' orders={production} onCancelOrder={handleCancelOrder} onChangeOrderStatus={handleOrderStatusChange} />
-      <OrdersBoards icon='✅' title='Finalizado' orders={done} onCancelOrder={handleCancelOrder} onChangeOrderStatus={handleOrderStatusChange} /> */}
-    </div>
-  );
+    <main className="prose prose-invert prose-headings:text-zinc-100 prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-xl prose-h2:font-medium prose-p:text-zinc-300 prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-a:text-cyan-400">
+      <PageTitle title="Kitchen" description="Manage the status of all orders here." />
+      <div aria-label="Orders Board" className="flex items-center justify-center w-full">
+        <OrdersBoard ordersWaiting={waiting} ordersProduction={production} ordersDone={done} />
+      </div>
+    </main>
+  )
 }

@@ -27,7 +27,7 @@ export function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading
   }, 0);
 
   const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
-    await fetch(`https://api.the-coffee-class.com.br/api/orders/${id}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/api/orders/${id}`, {
       method: 'DELETE',
     }).then(
       () => onClose()
