@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION
+  baseURL: 'https://api.the-coffee-class.com.br/api'
 })
 
 export default api

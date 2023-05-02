@@ -16,7 +16,7 @@ interface OrderModalProps {
   isLoading?: boolean;
 }
 
-export default function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
+export function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
 
   if (!isVisible || !order) {
     return null;
@@ -27,7 +27,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
   }, 0);
 
   const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
-    await fetch(`http://localhost:3001/api/orders/${id}`, {
+    await fetch(`https://api.the-coffee-class.com.br/api/orders/${id}`, {
       method: 'DELETE',
     }).then(
       () => onClose()
