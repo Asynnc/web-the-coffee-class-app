@@ -3,7 +3,7 @@
 import { LayoutDashboard, LayoutList, LucideIcon, LucideProps, PackageSearch, Utensils } from 'lucide-react';
 
 interface NavItem {
-  icon?: JSX.Element | LucideProps | LucideIcon | string
+  icon?: JSX.Element | LucideProps | LucideIcon | string | any
   label: string;
   subLabel?: string;
   children?: Array<NavItem>;
