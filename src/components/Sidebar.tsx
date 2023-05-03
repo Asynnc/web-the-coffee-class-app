@@ -12,12 +12,12 @@ export function Sidebar() {
 
   return (
     <aside className="border-r border-white/10 w-80 fixed lest-0 top-0 bottom-0 p-6 hidden lg:block">
-      <Image src={LogoIMG} alt="The Coffee Class Logo" className="-mt-3 cursor-pointer" role='presentation' onClick={() => window.location.href = '/'} />
-      <nav className="mt-12 flex flex-col gap-6">
+      <Image src={LogoIMG} alt="The Coffee Class Logo" className="-mt-4 cursor-pointer" role='presentation' onClick={() => window.location.href = '/'} />
+      <nav className="mt-10 flex flex-col gap-6">
         <div className="flex flex-col gap-4">
-          <div className="text-xs flex flex-col pl-2 gap-2">
+          <div className="text-sm flex flex-col pl-2 gap-2">
             {session?.user ? (
-              NAV_ITEMS.map((element, index) => (
+              NAV_ITEMS.map((element) => (
                 <>
                   <strong className="text-zinc-100 font-medium text-sm">{element.label}</strong>
                   {element.children && (
