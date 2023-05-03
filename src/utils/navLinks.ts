@@ -31,7 +31,7 @@ export const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Orders',
         subLabel: 'An information management tool of all orders.',
-        href: '/dashboard/kitchen',
+        href: '/dashboard/orders',
       },
     ],
   },
