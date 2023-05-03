@@ -16,7 +16,7 @@ interface OrderModalProps {
   isLoading?: boolean;
 }
 
-export function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
+export default function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading, onChangeOrderStatus }: OrderModalProps) {
 
   if (!isVisible || !order) {
     return null;
@@ -27,7 +27,7 @@ export function OrderModal({ isVisible, order, onClose, onCancelOrder, isLoading
   }, 0);
 
   const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
-    await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/api/orders/${id}`, {
+    await fetch(`http://localhost:3001/api/orders/${id}`, {
       method: 'DELETE',
     }).then(
       () => onClose()
