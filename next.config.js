@@ -33,7 +33,7 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'api.the-coffee-class.com.br',
-        port: '3001',
+        port: '',
         pathname: '/**',
       }
     ],

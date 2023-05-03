@@ -3,7 +3,7 @@
 import { OrderProps } from "@/types/Order";
 import { Tab } from "@headlessui/react";
 import { useState } from "react";
-import { OrderModal } from "./OrderModal";
+import OrderModal from "./OrderModal";
 
 interface OrdersBoardsProps {
   icon?: string;
