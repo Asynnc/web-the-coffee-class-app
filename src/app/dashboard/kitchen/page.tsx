@@ -4,14 +4,13 @@ import { ordersMock } from "@/mocks/order";
 import { OrderProps } from "@/types/Order";
 
 const getOrders = async (): Promise<OrderProps[] | any> => {
-
   // http://localhost:3001/api/orders
-
   try {
     const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/orders`, {
       next: {
         revalidate: 1
-      }
+      },
+      cache: 'no-cache'
     });
 
     return data.json()
@@ -22,13 +21,10 @@ const getOrders = async (): Promise<OrderProps[] | any> => {
 }
 
 export default async function Orders() {
-
   const orders = await getOrders()
-
   if (!orders) {
     return null
   }
-
   const production = orders.filter((order: OrderProps) => order.status === 'IN_PRODUCTION');
   const waiting = orders.filter((order: OrderProps) => order.status === 'WAITING');
   const done = orders.filter((order: OrderProps) => order.status === 'DONE');
