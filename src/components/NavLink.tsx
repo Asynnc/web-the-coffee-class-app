@@ -1,5 +1,5 @@
 'use client';
-import { LucideIcon, LucideProps } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -7,7 +7,7 @@ interface NavLinkProps {
   label?: string,
   href: string,
   children?: React.ReactNode,
-  icon?: JSX.Element | LucideProps | LucideIcon | string
+  icon?: string
 }
 
 export function NavLink({ label, href, children, icon }: NavLinkProps) {
@@ -17,11 +17,17 @@ export function NavLink({ label, href, children, icon }: NavLinkProps) {
   return (
     <Link
       data-active={activeHref === href}
-      className="px-4 text-xs py-1.5 border-l border-white/5 text-zinc-300 hover:text-white transition-colors data-[active=true]:border-orange-400 data-[active=true]:bg-orange-500/10"
+      className="px-4 py-1.5 border-l border-white/5 text-zinc-300 hover:text-white transition-colors data-[active=true]:border-orange-400"
       href={href}
       aria-label={label}>
-      <div className='flex items-center'>
-        {icon && (icon as JSX.Element)}
+      <div className='flex align-middle'>
+        {icon && (
+          <Image
+            data-active={activeHref === href}
+            src={icon}
+            alt='label'
+          />
+        )}
         {label || children}
       </div>
     </Link>
