@@ -11,7 +11,7 @@ const getOrders = async (): Promise<OrderProps[] | any> => {
       },
       cache: 'no-cache'
     });
-
+    console.log(data.json)
     return data.json()
   } catch (error) {
     console.log(error)
