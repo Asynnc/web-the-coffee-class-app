@@ -17,7 +17,7 @@ export function NavLink({ label, href, children, icon }: NavLinkProps) {
   return (
     <Link
       data-active={activeHref === href}
-      className="px-4 py-1.5 border-l border-white/5 text-zinc-300 hover:text-white transition-colors data-[active=true]:border-orange-400"
+      className="px-4 py-1.5 border-l border-white/5 text-zinc-300 hover:text-white transition-colors data-[active=true]:border-orange-400 data-[active=true]:bg-orange-500/10"
       href={href}
       aria-label={label}>
       <div className='flex align-middle'>
