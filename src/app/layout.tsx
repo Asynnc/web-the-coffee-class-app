@@ -1,4 +1,5 @@
 import { Widget } from '@/components/FeedbackWidget';
+import { Footer } from '@/components/Footer';
 import { HeroPattern } from '@/components/HeroPattern';
 import { Sidebar } from '@/components/Sidebar';
 import { Analytics } from '@vercel/analytics/react';
@@ -29,6 +30,7 @@ export default function RootLayout({
             <HeroPattern />
             <div className='py-24 max-w-4xl px-8 mx-auto'>
               {children}
+              <Footer />
             </div>
             <Widget />
           </div>
