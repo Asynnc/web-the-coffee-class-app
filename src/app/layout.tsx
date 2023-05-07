@@ -1,9 +1,11 @@
 import { Widget } from '@/components/FeedbackWidget';
 import { Footer } from '@/components/Footer';
 import { HeroPattern } from '@/components/HeroPattern';
-import { Sidebar } from '@/components/Sidebar';
+import { Sidebar } from '@/components/Sidebar/Sidebar';
+import { default as Spinner } from '@/components/Spinners/Spinner';
 import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
+import { Suspense } from 'react';
 import { Header } from '../components/Header';
 import Provider from './Provider';
 import './globals.css';
@@ -24,7 +26,9 @@ export default function RootLayout({
     <html lang="pt-BR" className={inter.className}>
       <body className='bg-zinc-900'>
         <Provider>
-          <Sidebar />
+          <Suspense fallback={<Spinner />}>
+            <Sidebar />
+          </Suspense>
           <div className='lg:ml-80 relative h-screen'>
             <Header />
             <HeroPattern />
@@ -32,7 +36,9 @@ export default function RootLayout({
               {children}
               <Footer />
             </div>
-            <Widget />
+            <Suspense fallback={<Spinner />}>
+              <Widget />
+            </Suspense>
           </div>
         </Provider>
         <Analytics />
