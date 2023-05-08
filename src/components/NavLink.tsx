@@ -1,18 +1,18 @@
 'use client';
-import Image from 'next/image';
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { ToolTip } from './Tooltip';
 
 interface NavLinkProps {
   label?: string,
   href: string,
-  children?: React.ReactNode,
-  icon?: string
+  description?: string | undefined | null
 }
 
-export function NavLink({ label, href, children, icon }: NavLinkProps) {
+export function NavLink({ label, href, description }: NavLinkProps) {
 
-  const activeHref = usePathname()
+  const activeHref = usePathname();
 
   return (
     <Link
@@ -20,16 +20,11 @@ export function NavLink({ label, href, children, icon }: NavLinkProps) {
       className="px-4 py-1.5 border-l border-white/5 text-zinc-300 hover:text-white transition-colors data-[active=true]:border-orange-400 data-[active=true]:bg-orange-500/10"
       href={href}
       aria-label={label}>
-      <div className='flex align-middle'>
-        {icon && (
-          <Image
-            data-active={activeHref === href}
-            src={icon}
-            alt='label'
-          />
-        )}
-        {label || children}
-      </div>
+      <ToolTip tooltip={description}>
+        <div className='flex align-middle -z-50'>
+          {label}
+        </div>
+      </ToolTip>
     </Link>
   )
 }

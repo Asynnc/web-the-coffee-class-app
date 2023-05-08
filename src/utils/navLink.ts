@@ -1,6 +1,6 @@
 interface NavItem {
   label: string;
-  subLabel?: string;
+  subLabel?: string | null;
   children?: Array<NavItem>;
   href?: string;
 }
@@ -62,7 +62,7 @@ export const COMMON_ITEMS: Array<NavItem> = [
     label: 'Development',
     children: [
       {
-        label: 'The playbook',
+        label: 'The Playbook',
         subLabel: 'An information of all management process development.',
         href: '/playbook',
       },

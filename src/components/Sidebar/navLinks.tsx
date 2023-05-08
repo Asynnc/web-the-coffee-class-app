@@ -13,20 +13,20 @@ export default function NavLinks() {
           {session?.user ? (
             NAV_ITEMS.map((element) => (
               <>
-                <strong className="text-zinc-100 font-medium text-sm">{element.label}</strong>
+                <strong className="text-zinc-100 font-medium text-sm" key={element.label}>{element.label}</strong>
                 {element.children && (
                   element.children.map((child) => (
-                    <NavLink key={child.label} href={String(child.href)} label={child.label} />
+                    <NavLink key={child.href} href={String(child.href)} label={child.label} />
                   ))
                 )}
               </>
             ))) : (
             COMMON_ITEMS.map((element) => (
               <>
-                <strong className="text-zinc-100 font-medium text-sm">{element.label}</strong>
+                <strong className="text-zinc-100 font-medium text-sm" key={element.label}>{element.label}</strong>
                 {element.children && (
                   element.children.map((child) => (
-                    <NavLink key={child.label} href={String(child.href)} label={child.label} />
+                    <NavLink key={child.href} href={String(child.href)} label={child.label} description={child.subLabel} />
                   ))
                 )}
               </>
