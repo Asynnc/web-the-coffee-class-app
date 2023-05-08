@@ -1,7 +1,7 @@
 'use client'
 
 import { NavLink } from "@/components/NavLink";
-import { NAV_ITEMS } from "@/utils/navLink";
+import { COMMON_ITEMS, NAV_ITEMS } from "@/utils/navLink";
 import { useSession } from "next-auth/react";
 
 export default function NavLinks() {
@@ -13,14 +13,25 @@ export default function NavLinks() {
           {session?.user ? (
             NAV_ITEMS.map((element) => (
               <>
-                <strong className="text-zinc-100 font-medium text-sm">{element.label}</strong>
+                <strong className="text-zinc-100 font-medium text-sm" key={element.label}>{element.label}</strong>
                 {element.children && (
                   element.children.map((child) => (
-                    <NavLink key={child.label} href={String(child.href)} label={child.label} />
+                    <NavLink key={child.href} href={String(child.href)} label={child.label} />
                   ))
                 )}
               </>
-            ))) : (null)}
+            ))) : (
+            COMMON_ITEMS.map((element) => (
+              <>
+                <strong className="text-zinc-100 font-medium text-sm" key={element.label}>{element.label}</strong>
+                {element.children && (
+                  element.children.map((child) => (
+                    <NavLink key={child.href} href={String(child.href)} label={child.label} description={child.subLabel} />
+                  ))
+                )}
+              </>
+            ))
+          )}
         </div>
       </div>
     </nav>

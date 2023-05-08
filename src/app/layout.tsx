@@ -15,6 +15,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'The Coffee Class',
+  icons: {
+    icon: '/logo.png'
+  },
   description: 'A pilot project to demonstrate my learnings in Next 13, TailwindCSS, AWS, UX | UI, Project Management, Documentation, Widgets, MongoDB, Deploy ... Well... the true Fullstack of things.',
   openGraph: {
     type: "website",
