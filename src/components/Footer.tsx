@@ -3,12 +3,12 @@ export function Footer() {
 
   return (
     <footer
-      className="bg-neutral-200 text-center dark:bg-neutral-700 lg:text-left mt-24 bottom-0 w-full max-w-4xl">
-      <div className="p-4 text-center text-neutral-700 dark:text-neutral-200">
-        © {now.getFullYear()}:
+      className="bg-zinc-50 text-center lg:text-left mt-24 bottom-0 w-full max-w-4xl">
+      <div className="p-4 text-center text-gray-900">
+        {/* © {now.getFullYear()}: */}
         <a
-          className="text-neutral-800 dark:text-neutral-400"
-          href="https://www.linkedin.com/in/tony-silva/"> Antonio Silva</a>
+          className="text-gray-900"
+          href="https://www.buymeacoffee.com/tonybsilvadev"> Buy me a coffee</a>
       </div>
     </footer>
   )
