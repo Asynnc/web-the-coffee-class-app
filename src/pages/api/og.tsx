@@ -1,5 +1,7 @@
 import { ImageResponse } from '@vercel/og';
+import Image from 'next/image';
 import { NextRequest } from 'next/server';
+
 
 export const config = {
   runtime: 'edge',
@@ -39,11 +41,10 @@ export default function handler(request: NextRequest) {
               justifyItems: 'center',
             }}
           >
-            <img
+            <Image
               alt="Vercel"
               height={200}
-              src="https://i.imgur.com/xgpvW8A.png"
-              style={{ margin: '0 30px' }}
+              src="./logo.svg"
               width={200}
             />
           </div>
@@ -57,8 +58,7 @@ export default function handler(request: NextRequest) {
               padding: '0 120px',
               lineHeight: 1.4,
               whiteSpace: 'pre-wrap',
-            }}
-          >
+            }}>
             {title}
           </div>
         </div>
