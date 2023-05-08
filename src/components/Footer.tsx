@@ -8,7 +8,7 @@ export function Footer() {
         {/* © {now.getFullYear()}: */}
         <a
           className="text-gray-900"
-          href="https://www.buymeacoffee.com/tonybsilvadev"> Buy me a coffee</a>
+          href="https://www.buymeacoffee.com/tonybsilvadev" target="__blank"> Buy me a coffee</a>
       </div>
     </footer>
   )

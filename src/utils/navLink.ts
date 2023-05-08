@@ -11,7 +11,7 @@ export const NAV_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'Dashboard',
-        subLabel: 'An information management tool that receives data from a linked database to provide data visualizations',
+        subLabel: 'An information management to data visualizations',
         href: '/dashboard',
       },
     ],
@@ -44,12 +44,12 @@ export const COMMON_ITEMS: Array<NavItem> = [
     children: [
       {
         label: 'Presentation',
-        subLabel: 'An information management tool that receives data from a linked database to provide data visualizations',
+        subLabel: 'Introducing yourself...',
         href: '/',
       },
       {
         label: 'The Project',
-        subLabel: 'A general information about this project',
+        subLabel: 'An information about this project',
         href: '/the-project',
       },
       {
