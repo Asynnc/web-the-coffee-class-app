@@ -34,7 +34,6 @@ export function ScreenshotButton({ screenshot, onScreenshotTook }: ScreenshotBut
 
   return (
     <button
-      disabled
       type='button'
       title='Tirar print da tela.'
       aria-label='Tirar print da tela'
