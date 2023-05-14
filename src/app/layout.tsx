@@ -10,6 +10,7 @@ import { Suspense } from 'react';
 import { Header } from '../components/Header';
 import Provider from './Provider';
 import './globals.css';
+import Sidebar2 from '@/components/Sidebar2';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -41,12 +42,13 @@ export default function RootLayout({
       <body className='bg-zinc-900'>
         <Provider>
           <Suspense fallback={<Spinner />}>
-            <Sidebar />
+            {/* <Sidebar /> */}
+            <Sidebar2 />
           </Suspense>
-          <div className='lg:ml-80 relative h-screen'>
+          <div className='relative h-screen'>
             <Header />
             <HeroPattern />
-            <div className='py-24 max-w-4xl px-8 mx-auto'>
+            <div className='py-24 max-w-5xl px-8 mx-auto'>
               {children}
               <Footer />
             </div>

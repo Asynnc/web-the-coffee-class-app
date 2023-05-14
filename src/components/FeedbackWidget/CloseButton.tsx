@@ -8,7 +8,7 @@ export function CloseButton() {
     <Popover.Button
       title='Fechar formulário de feedback'
       aria-label='Fechar formulário de feedback'
-      className='top-5 right-5 absolute text-zinc-400 hover:text-zinc-100'
+      className='top-5 right-5 absolute text-white hover:text-zinc-100'
     ><X weight='bold' className='w-4 h-4' /></Popover.Button>
   )
 }
