@@ -34,7 +34,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
       type: feedbackType,
       comment,
       screenshot,
-      email,
+      mail: email,
       satisfaction,
     })
     setIsSendingFeedback(false)
