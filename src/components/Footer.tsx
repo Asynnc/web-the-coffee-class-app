@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer
-      className="bg-zinc-50 text-center lg:text-left mt-24 bottom-0 w-full max-w-4xl">
+      className="bg-zinc-50 text-center lg:text-left mt-24 bottom-0 w-full max-w-5xl">
       <div className="p-4 text-center text-gray-900 flex justify-center content-around">
         <p className="text-sm leading-6 text-gray-900">
           <strong className="font-semibold">The Coffee Class App</strong> <strong> · </strong> © {now.getFullYear()}

@@ -1,5 +1,6 @@
 'use client'
 
+import SidebarContextProvider, { SidebarContext } from '@/context/sidebar';
 import { SessionProvider } from 'next-auth/react';
 import React from 'react';
 
@@ -11,7 +12,9 @@ export default function Provider({ children }: Props) {
 
   return (
     <SessionProvider>
-      {children}
+      <SidebarContextProvider>
+        {children}
+      </SidebarContextProvider>
     </SessionProvider>
   )
 
