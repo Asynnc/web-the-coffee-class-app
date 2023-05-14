@@ -22,7 +22,7 @@
     "git-commit-msg-linter": "^5.0.4",
     "html2canvas": "^1.4.1",
     "lucide-react": "^0.128.0",
-    "next": "^13.4.1",
+    "next": "^13.4.2",
     "next-auth": "^4.21.1",
     "next-seo": "^6.0.0",
     "next-transpile-modules": "^10.0.0",

@@ -11,6 +11,8 @@ import { Header } from '../components/Header';
 import Provider from './Provider';
 import './globals.css';
 import Sidebar2 from '@/components/Sidebar2';
+import BreadCrumb from '@/components/BreadCrumb';
+import { COMMON_ITEMS, NAV_ITEMS } from '@/utils/navLink';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -49,6 +51,7 @@ export default function RootLayout({
             <Header />
             <HeroPattern />
             <div className='py-24 max-w-5xl px-8 mx-auto'>
+              <BreadCrumb items={NAV_ITEMS || COMMON_ITEMS} />
               {children}
               <Footer />
             </div>
