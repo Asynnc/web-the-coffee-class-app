@@ -34,7 +34,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
       type: feedbackType,
       comment,
       screenshot,
-      email,
+      mail: email,
       satisfaction,
     })
     setIsSendingFeedback(false)
@@ -62,7 +62,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
 
       <form onSubmit={handleSubmitFeedback} className='my-4 w-full'>
 
-        <input onChange={(e) => setEmail(e.target.value)} type="text" className='w-full border-2 p-4 mb-2 bg-transparent text-white placeholder-zinc-200 text-sm rounded-md focus:border-white focus:ring-white focus:ring-1 focus:outline-none resize-none ' placeholder='Your e-mail address...' />
+        <input name='email' id='email' onChange={(e) => setEmail(e.target.value)} type="text" className='w-full border-2 p-4 mb-2 bg-transparent text-white placeholder-zinc-200 text-sm rounded-md focus:border-white focus:ring-white focus:ring-1 focus:outline-none resize-none ' placeholder='Your e-mail address...' />
         <textarea
           onChange={e => setComment(e.target.value)}
           placeholder='Tell us in detail whats going on...'
