@@ -12,7 +12,7 @@ export function Widget() {
       <Popover.Button
         title='Feedback'
         aria-label='Feedback'
-        className='bg-orange-500 rounded-full px-3 h-12 text-white flex items-center group shadow-[0_0.5rem_1.5rem_#e5b85740]'
+        className='bg-orange-400 rounded-full px-3 h-12 text-white flex items-center group shadow-[0_0.5rem_1.5rem_#e5b85740]'
       >
         <ChatTeardropDots className='w-6 h-6' />
 

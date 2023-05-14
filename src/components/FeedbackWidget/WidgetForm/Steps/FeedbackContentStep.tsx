@@ -45,7 +45,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
           title='Voltar'
           aria-label='Voltar'
           onClick={onFeedbackRestartRequested}
-          className='top-5 left-5 absolute text-zinc-400 hover:text-zinc-100'
+          className='top-5 left-5 absolute text-white hover:text-zinc-100'
         ><ArrowLeft weight='bold' className='w-4 h-4' /></button>
 
         <span className='text-xl leading-6 flex items-center gap-2'>
@@ -60,7 +60,7 @@ export function FeedbackContentStep({ feedbackType, onFeedbackRestartRequested, 
         <textarea
           onChange={e => setComment(e.target.value)}
           placeholder='Tell us in detail whats going on...'
-          className='md:min-w-[304px] w-full min-h-[112px] p-4 text-sm placeholder-zinc-400 text-zinc-100 border-black bg-transparent rounded-md focus:border-white focus:ring-white focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin'
+          className='md:min-w-[304px] w-full min-h-[112px] p-4 text-sm placeholder-zinc-200 text-white border-2 bg-transparent rounded-md focus:border-white focus:ring-white focus:ring-1 focus:outline-none resize-none scrollbar-thumb-zinc-700 scrollbar-track-transparent scrollbar-thin'
         />
 
         <footer className='flex gap-2 mt-2'>
