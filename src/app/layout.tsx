@@ -50,8 +50,8 @@ export default function RootLayout({
           <div className='relative h-screen'>
             <Header />
             <HeroPattern />
-            <div className='py-24 max-w-5xl px-8 mx-auto'>
-              <BreadCrumb items={NAV_ITEMS || COMMON_ITEMS} />
+            <div className='py-12 max-w-5xl px-8 mx-auto'>
+              {/* <BreadCrumb items={NAV_ITEMS || COMMON_ITEMS} /> */}
               {children}
               <Footer />
             </div>
