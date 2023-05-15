@@ -3,7 +3,7 @@
 import { SidebarClose, SidebarOpen } from "lucide-react";
 import { Spinner } from "phosphor-react";
 import { Suspense, useEffect } from "react";
-import NavLinks from "../Sidebar/navLinks";
+import NavLinks from "./navLinks";
 import LogoIMG from '../../assets/images/banners/3.svg'
 import Image from "next/image";
 import { useSidebarContext } from "../../context/sidebar";
@@ -24,6 +24,11 @@ export default function Sidebar2() {
     };
   }, [setShowSidebar, showSidebar]);
 
+
+  const handleLinkClick = () => {
+    setShowSidebar(false);
+  };
+
   return (
     <div>
       {
@@ -39,7 +44,7 @@ export default function Sidebar2() {
         className={`bg-zinc-900 border-r border-white/10 w-80 fixed lest-0 top-0 bottom-0 p-6 z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
         <Image src={LogoIMG} alt="The Coffee Class Logo" className="-mt-4 cursor-pointer" role='presentation' />
         <Suspense fallback={<Spinner />}>
-          <NavLinks />
+          <NavLinks onClick={handleLinkClick} />
         </Suspense>
       </aside>
     </div>
