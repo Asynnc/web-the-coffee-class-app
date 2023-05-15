@@ -79,7 +79,9 @@ Use this space to show useful examples of how a project can be used. Additional 
 -->
 _For more examples, please refer to the [Documentation](https://tonybsilvadev.gitbook.io/the-coffee-class/)_
 
-_Api Colletion - [Insomnia](https://we.tl/t-pB9wICM014)_
+## API
+
+[![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=The%20Coffee%20Class%20App%20-%20API&uri=https%3A%2F%2Fraw.githubusercontent.com%2FAsynnc%2Fcollections%2Fmain%2Fthe-coffee-class-app.json%3Ftoken%3DGHSAT0AAAAAACBJEZJGC2O7MM7XT5CPSHRAZDCATYQ)
 
 <!-- ROADMAP -->
 ## Roadmap
