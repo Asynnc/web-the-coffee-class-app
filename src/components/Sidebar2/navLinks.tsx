@@ -1,12 +1,15 @@
 'use client'
 
-import { NavLink } from "@/components/NavLink";
+import { NavLink } from "@/components/Sidebar2/NavLink";
 import { COMMON_ITEMS, NAV_ITEMS } from "@/utils/navLink";
 import { Search } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { useEffect } from "react";
 
-export default function NavLinks() {
+interface NavLinksProps {
+  onClick: () => void
+}
+
+export default function NavLinks({ onClick }: NavLinksProps) {
   const { data: session } = useSession()
   return (
     <nav className="mt-10 flex flex-col gap-6">
@@ -18,7 +21,7 @@ export default function NavLinks() {
                 <strong className="text-zinc-100 font-medium text-sm" key={element.label}>{element.label}</strong>
                 {element.children && (
                   element.children.map((child) => (
-                    <NavLink key={child.href} href={String(child.href)} label={child.label} />
+                    <NavLink key={child.href} href={String(child.href)} label={child.label} onClick={onClick} />
                   ))
                 )}
               </>
@@ -33,7 +36,7 @@ export default function NavLinks() {
                   <strong className="text-zinc-100 font-medium text-sm" key={element.label}>{element.label}</strong>
                   {element.children && (
                     element.children.map((child) => (
-                      <NavLink key={child.href} href={String(child.href)} label={child.label} description={child.subLabel} />
+                      <NavLink key={child.href} href={String(child.href)} label={child.label} description={child.subLabel} onClick={onClick} />
                     ))
                   )}
                 </>

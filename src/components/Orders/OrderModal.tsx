@@ -27,7 +27,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
   }, 0);
 
   const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
-    await fetch(`http://localhost:3001/api/orders/${id}`, {
+    await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/orders/${id}`, {
       method: 'DELETE',
     }).then(
       () => onClose()
