@@ -8,12 +8,11 @@ interface ProductCardProps {
   name: string;
   price: number;
 }
-//${process.env.AWS_S3_URL}/${urlImage}
 export default function ProductCard({ urlImage, name, price }: ProductCardProps) {
   return (
     <div className="text-center mt-4">
       <Image
-        src={`https://the-coffee-class.s3.amazonaws.com/${urlImage}`}
+        src={`${process.env.AWS_S3_URL}/${urlImage}`}
         width={100}
         height={100}
         quality={100}
