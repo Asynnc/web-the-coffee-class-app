@@ -6,7 +6,7 @@ import { Suspense } from "react";
 
 const getProducts = async (): Promise<Product[] | any> => {
   try {
-    const data = await fetch(`https://api.the-coffee-class.com.br/api/products`, {
+    const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/products`, {
       cache: 'no-cache'
     });
     console.log(data.json)
