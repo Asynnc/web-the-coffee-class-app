@@ -1,9 +1,9 @@
 'use client'
 
 import { Dialog, Disclosure, Transition } from "@headlessui/react"
-import { ChevronUpIcon } from "lucide-react"
+import { ChevronUp } from "lucide-react"
 import Image from "next/image"
-import { Fragment, useState } from "react"
+import { Fragment } from "react"
 
 interface PixModalProps {
   isVisible: boolean;
@@ -27,7 +27,7 @@ export default function PixModal({ isVisible, onClose }: PixModalProps) {
                       <>
                         <Disclosure.Button className="flex w-full justify-between rounded-lg bg-transparent px-4 py-2 my-2 text-left text-sm font-medium text-orange-900 hover:bg-orange-200 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-75">
                           <span>How do I contribute?</span>
-                          <ChevronUpIcon
+                          <ChevronUp
                             className={`${open ? 'rotate-180 transform' : ''
                               } h-5 w-5 text-orange-500`}
                           />
