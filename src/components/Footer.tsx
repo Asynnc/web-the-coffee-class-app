@@ -23,9 +23,6 @@ export function Footer() {
   function handleCloseModalPix() {
     setIsModalVisible(false);
   }
-
-  console.log(isModalVisible)
-
   return (
     <>
       <footer

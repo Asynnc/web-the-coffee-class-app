@@ -1,6 +1,6 @@
 'use client'
 
-import { NavLink } from "@/components/Sidebar2/NavLink";
+import { NavLink } from "@/components/Sidebar/NavLink";
 import { COMMON_ITEMS, NAV_ITEMS } from "@/utils/navLink";
 import { Search } from "lucide-react";
 import { useSession } from "next-auth/react";
