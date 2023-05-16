@@ -6,6 +6,7 @@ import { ChevronsUpDown } from "lucide-react"
 import { Fragment, useState } from "react"
 import ProductCard from "./CardProduct"
 import ProductsCard from "./CardProducts"
+import { CheckIcon } from "lucide-react"
 
 interface Props {
   products: Product[]
@@ -29,7 +30,7 @@ export default function ComboProducts({ products }: Props) {
   return (
     <>
       <div className="mt-4 max-w-full">
-        <Combobox value={selected} onChange={setSelected}>
+        <Combobox value={selected} onChange={setSelected} nullable>
           <div className="relative mt-1">
             <div className="relative w-full cursor-pointer overflow-hidden rounded-md bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
               <Combobox.Input
@@ -58,11 +59,11 @@ export default function ComboProducts({ products }: Props) {
                     Nothing found.
                   </div>
                 ) : (
-                  filteredProduct.map((product: any) => (
+                  filteredProduct.sort((a: any, b: any) => a.name.localeCompare(b.name)).map((product: any) => (
                     <Combobox.Option
                       key={product._id}
                       className={({ active }) =>
-                        `relative cursor-pointer select-none py-2 pr-4
+                        `relative cursor-pointer select-none py-2 pl-10 pr-4
                        ${active ? 'bg-orange-400 text-white' : 'text-gray-900'
                         }`
                       }
@@ -75,7 +76,14 @@ export default function ComboProducts({ products }: Props) {
                               }`}>
                             {product.name}
                           </span>
-
+                          {selected ? (
+                            <span
+                              className={`absolute inset-y-0 left-0 flex items-center ${active ? 'text-white' : 'text-teal-600'
+                                }`}
+                            >
+                              <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                            </span>
+                          ) : null}
                         </>
                       )}
                     </Combobox.Option>
