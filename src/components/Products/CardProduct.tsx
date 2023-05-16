@@ -12,7 +12,7 @@ export default function ProductCard({ urlImage, name, price }: ProductCardProps)
   return (
     <div className="text-center mt-4">
       <Image
-        src={`${process.env.AWS_S3_URL}/${urlImage}`}
+        src={`https://the-coffee-class.s3.amazonaws.com/${urlImage}`}
         width={100}
         height={100}
         quality={100}
