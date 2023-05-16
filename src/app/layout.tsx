@@ -1,7 +1,6 @@
 import { Widget } from '@/components/FeedbackWidget';
 import { Footer } from '@/components/Footer';
 import { HeroPattern } from '@/components/HeroPattern';
-import { Sidebar } from '@/components/Sidebar/Sidebar';
 import { default as Spinner } from '@/components/Spinners/Spinner';
 import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
@@ -10,9 +9,7 @@ import { Suspense } from 'react';
 import { Header } from '../components/Header';
 import Provider from './Provider';
 import './globals.css';
-import Sidebar2 from '@/components/Sidebar2';
-import BreadCrumb from '@/components/BreadCrumb';
-import { COMMON_ITEMS, NAV_ITEMS } from '@/utils/navLink';
+import Sidebar2 from '@/components/Sidebar';
 
 const inter = Inter({ subsets: ['latin'] })
 
