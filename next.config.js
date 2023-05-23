@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "https://api.the-coffee-class.com.br/",
+    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "https://api.the-coffee-class.com.br/api",
   },
   images: {
     minimumCacheTTL: 60,
