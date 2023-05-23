@@ -12,7 +12,7 @@ export function Header() {
         <nav className="text-sm flex items-end gap-6">
           {/* <a className="text-zinc-400 hover:text-zinc-100 transition-colors" href="">API</a> */}
           <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" href="https://tonybsilvadev.gitbook.io/the-coffee-class/">Documentation</a>
-          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" href="mailto:tonybsilvadev@gmail.com?subject=The Coffee Class - Support">Support</a>
+          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" href="mailto:thecoffeeclassdev@gmail.com?subject=The Coffee Class - Support">Support</a>
         </nav>
 
         <div className="flex items-center border-l border-white/10 pl-6 ml-6 gap-6">
