@@ -1,12 +1,12 @@
 'use client'
 
-import { Product, ProductList } from "@/types/Product"
+import { Product } from "@/types/Product"
 import { Combobox, Transition } from "@headlessui/react"
 import { ChevronsUpDown } from "lucide-react"
 import { Fragment, useState } from "react"
 import ProductCard from "./CardProduct"
 import ProductsCard from "./CardProducts"
-import { CheckIcon } from "lucide-react"
+import { Check } from "lucide-react"
 
 interface Props {
   products: Product[]
@@ -81,7 +81,7 @@ export default function ComboProducts({ products }: Props) {
                               className={`absolute inset-y-0 left-0 flex items-center ${active ? 'text-white' : 'text-teal-600'
                                 }`}
                             >
-                              <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                              <Check className="h-5 w-5" aria-hidden="true" />
                             </span>
                           ) : null}
                         </>
