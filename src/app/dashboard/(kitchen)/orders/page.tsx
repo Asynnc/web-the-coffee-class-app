@@ -10,10 +10,8 @@ const getOrders = async (): Promise<OrderProps[] | any> => {
     const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/orders`, {
       next: {
         revalidate: 1
-      },
-      cache: 'no-cache'
+      }
     });
-    console.log(data.json)
     return data.json()
   } catch (error) {
     console.log(error)
