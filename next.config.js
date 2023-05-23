@@ -5,6 +5,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  env: {
+    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "https://api.the-coffee-class.com.br/",
+  },
   images: {
     minimumCacheTTL: 60,
     domains: ['https://imgur.com/', 'https://api.the-coffee-class.com.br', 'the-coffee-class.s3.amazonaws.com'],
