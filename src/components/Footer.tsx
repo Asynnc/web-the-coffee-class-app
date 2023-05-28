@@ -1,8 +1,6 @@
 'use client'
 
 import { ArrowUp } from "lucide-react"
-import PixModal from "./Modal/PixModal";
-import { useState } from "react";
 
 function scrollToTop() {
   window.scrollTo({
