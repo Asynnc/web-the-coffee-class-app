@@ -30,9 +30,9 @@
     <br />
     <a href="https://app.the-coffee-class.com.br/">View Demo</a>
     ·
-    <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/issues">Report Bug</a>
+    <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/issues">Report Bug / Feature</a>
     ·
-    <a href="https://github.com/Asynnc/dashboard-ui-tailwindcss/issues">Request Feature</a>
+    <a href="https://stats.uptimerobot.com/No5gmhZgx7">Status Application</a>
   </p>
 </p>
 
