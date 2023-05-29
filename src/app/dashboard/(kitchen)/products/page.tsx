@@ -8,7 +8,9 @@ import { Suspense } from "react";
 const getProducts = async (): Promise<Product[] | any> => {
   try {
     const data = await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/products`, {
-      cache: 'no-cache',
+      next: {
+        revalidate: 5
+      },
     });
     return data.json()
   } catch (error) {

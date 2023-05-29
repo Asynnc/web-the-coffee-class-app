@@ -15,10 +15,11 @@ export default function ProductCard({ urlImage, name, price }: ProductCardProps)
         src={`https://the-coffee-class.s3.amazonaws.com/${urlImage}`}
         width={100}
         height={100}
-        quality={100}
+        quality={75}
         priority
         className="mx-auto mb-4 w-32 rounded-md"
-        alt={name} />
+        alt={name}
+      />
       <h6 className="text-md font-medium leading-tight whitespace-pre-line">{name}</h6>
       <p className="text-neutral-500 dark:text-neutral-400">{formatCurrency(price)}</p>
     </div>
