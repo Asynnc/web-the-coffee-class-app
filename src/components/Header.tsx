@@ -10,9 +10,9 @@ export function Header() {
     <header className="w-screen px-8 py-3 border-b border-white/10 backdrop-blur flex items-center justify-end">
       <div className="grid grid-flow-col gap-x-2">
         <nav className="text-sm flex items-end gap-6">
-          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" href="https://tonybsilvadev.gitbook.io/the-coffee-class/">Doc</a>
-          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" href="https://help.the-coffee-class.com.br/">Help Center</a>
-          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" href="mailto:thecoffeeclassdev@gmail.com?subject=The Coffee Class - Support">Mail</a>
+          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" rel="noopener noreferrer" href="https://tonybsilvadev.gitbook.io/the-coffee-class/">Doc</a>
+          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" rel="noopener noreferrer" href="https://help.the-coffee-class.com.br/">Help Center</a>
+          <a className="text-zinc-400 hover:text-zinc-100 transition-colors" target="__blank" rel="noopener noreferrer" href="mailto:thecoffeeclassdev@gmail.com?subject=The Coffee Class - Support">Mail</a>
         </nav>
 
         <div className="flex items-center border-l border-white/10 pl-6 ml-6 gap-6">
