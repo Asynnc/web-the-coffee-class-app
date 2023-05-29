@@ -20,7 +20,7 @@ export default function ComboProducts({ products }: Props) {
   const filteredProduct =
     query === ''
       ? products
-      : products.filter((product: any) =>
+      : products.filter((product: Product) =>
         product.name
           .toLowerCase()
           .replace(/\s+/g, '')
@@ -29,10 +29,10 @@ export default function ComboProducts({ products }: Props) {
 
   return (
     <>
-      <div className="mt-4 max-w-full">
-        <Combobox value={selected} onChange={setSelected} nullable>
+      <div className="mt-4 max-w-5xl">
+        <Combobox value={selected} onChange={setSelected} >
           <div className="relative mt-1">
-            <div className="relative w-full cursor-pointer overflow-hidden rounded-md bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+            <div className="relative w-full cursor-pointer overflow-hidden rounded-full bg-white text-left shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm">
               <Combobox.Input
                 onClick={() => setSelected(null)}
                 className="w-full border-none p-2 pl-3 text-sm leading-6 text-gray-900 focus:ring-0"
@@ -53,9 +53,9 @@ export default function ComboProducts({ products }: Props) {
               leaveTo="opacity-0"
               afterLeave={() => setQuery('')}
             >
-              <Combobox.Options className="list-none absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
+              <Combobox.Options className="list-none absolute mt-1 max-h-60 max-w-5xl w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
                 {filteredProduct.length === 0 && query !== '' ? (
-                  <div className="relative cursor-default select-none py-2 text-gray-700">
+                  <div className="relative cursor-pointer select-none py-2 text-gray-700">
                     Nothing found.
                   </div>
                 ) : (
