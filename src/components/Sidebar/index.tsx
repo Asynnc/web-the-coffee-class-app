@@ -14,7 +14,11 @@ export default function Sidebar2() {
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === 'Escape') {
-        setShowSidebar(!showSidebar);
+        setShowSidebar(false);
+      }
+
+      if ((event.key === 's' || event.key === 'S') && (event.shiftKey)) {
+        setShowSidebar(true);
       }
     }
 
