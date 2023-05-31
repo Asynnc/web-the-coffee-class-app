@@ -6,10 +6,12 @@ import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
-import { Header } from '../components/Header';
 import Provider from './Provider';
 import './globals.css';
 import Sidebar2 from '@/components/Sidebar';
+import { Header } from '@/components/Header/Header';
+import { useLocale } from 'next-intl';
+import NextIntlProvider from '@/context/next-intl-client';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -31,34 +33,53 @@ export const metadata: Metadata = {
   }
 }
 
-export default function RootLayout({
-  children
+export default async function RootLayout({
+  children,
+  params,
 }: {
   children: React.ReactNode,
+  params: {
+    locale: string
+  }
 }) {
+
+  let messages;
+  const locale = useLocale();
+
+  if (params.locale !== locale) {
+    <Spinner />
+  }
+
+  try {
+    messages = (await import(`../../messages/${params.locale}.json`)).default;
+  } catch (error) {
+    <Spinner />
+  }
+
   return (
-    <html lang="pt-BR" className={inter.className}>
+    <html lang={locale} className={inter.className}>
       <body className='bg-zinc-900'>
         <Provider>
-          <Suspense fallback={<Spinner />}>
-            {/* <Sidebar /> */}
-            <Sidebar2 />
-          </Suspense>
-          <div className='relative h-screen'>
-            <Header />
-            <HeroPattern />
-            <div className='py-12 max-w-5xl px-8 mx-auto'>
-              {/* <BreadCrumb items={NAV_ITEMS || COMMON_ITEMS} /> */}
-              {children}
-              <Footer />
-            </div>
+          <NextIntlProvider locale={params.locale} messages={messages}>
             <Suspense fallback={<Spinner />}>
-              <Widget />
+              {/* <Sidebar /> */}
+              <Sidebar2 />
             </Suspense>
-          </div>
+            <div className='relative h-screen'>
+              <Header />
+              <HeroPattern />
+              <div className='py-12 max-w-5xl px-8 mx-auto'>
+                {children}
+                <Footer />
+              </div>
+              <Suspense fallback={<Spinner />}>
+                <Widget />
+              </Suspense>
+            </div>
+          </NextIntlProvider>
         </Provider>
         <Analytics />
-      </body>
-    </html>
+      </body >
+    </html >
   )
 }

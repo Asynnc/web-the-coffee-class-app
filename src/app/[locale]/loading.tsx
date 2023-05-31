@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LoadingImg from '../assets/loadings/Coffee-1.1s-200px.gif';
+import LoadingImg from '../../assets/loadings/Coffee-1.1s-200px.gif';
 
 export default function Loading() {
   return (

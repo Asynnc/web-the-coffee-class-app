@@ -34,6 +34,8 @@ const nextConfig = {
   },
 }
 
-const withTM = require('next-transpile-modules')([], { debug: true })
-
-module.exports = withTM(nextConfig)
+// const withTM = require('next-transpile-modules')([], { debug: true })
+const withNextIntl = require('next-intl/plugin')(
+  './src/i18n.ts'
+);
+module.exports = withNextIntl(nextConfig)
