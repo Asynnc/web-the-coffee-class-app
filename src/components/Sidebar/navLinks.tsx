@@ -1,5 +1,4 @@
 'use client'
-
 import { NavLink } from "@/components/Sidebar/NavLink";
 import { COMMON_ITEMS, NAV_ITEMS } from "@/utils/navLink";
 import { Search } from "lucide-react";

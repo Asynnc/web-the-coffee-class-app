@@ -31,7 +31,11 @@ export function Footer() {
                 STATUS
               </a>
             </div>
-            <button type="button" className="-m-3 p-3 hover:bg-orange-200 hover:rounded-full focus-visible:outline-offset-[-4px] mr-2" onClick={scrollToTop}>
+            <button
+              id="up-page"
+              aria-label="hidden"
+              type="button"
+              className="-m-3 p-3 hover:bg-orange-200 hover:rounded-full focus-visible:outline-offset-[-4px] mr-2" onClick={scrollToTop}>
               <ArrowUp />
             </button>
           </div>
