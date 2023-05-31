@@ -18,5 +18,27 @@
     "management-details": "Inventory management system to ensure the necessary ingredients are always available to prepare orders.",
     "data-analysis": "Data analysis",
     "data-analysis-details": "generate valuable insights into restaurant performance, such as average order preparation time and number of orders per hour, to help improve service efficiency and increase customer satisfaction."
+  },
+  "Banner": {
+    "title": "The Coffee Class App",
+    "description": "You are using/viewing a pilot of a technology suite study.",
+    "cta": "Follow me "
+  },
+  "NotFound": {
+    "title": "oops! Page not found.",
+    "description": "Oops! The page you are looking for does not exist. It might have been moved or deleted.",
+    "home": "Home",
+    "contact": "Contact Us"
+  },
+  "Header": {
+    "doc": "Docs",
+    "help-center": "Help center",
+    "mail": "Mail",
+    "sign-in": "Sign in",
+    "sign-out": "Sign out"
+  },
+  "Products": {
+    "title": "Products",
+    "description": "List of products"
   }
 }

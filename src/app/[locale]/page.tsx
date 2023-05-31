@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 export default function Home() {
   const t = useTranslations('Index');
 
-
   const features = [
     { name: t('interface'), description: t('interface-description') },
     { name: t('real-time'), description: t('real-time-details') },

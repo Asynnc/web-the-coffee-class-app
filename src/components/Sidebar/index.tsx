@@ -13,12 +13,8 @@ export default function Sidebar2() {
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === 'Escape') {
-        setShowSidebar(false);
-      }
-
       if ((event.key === 's' || event.key === 'S') && (event.shiftKey)) {
-        setShowSidebar(true);
+        setShowSidebar(!showSidebar);
       }
     }
 
@@ -38,10 +34,16 @@ export default function Sidebar2() {
       {
         showSidebar ? (
           <button
+            id="close-sidebar"
+            aria-label="hidden"
             className="flex text-2xl text-white items-center cursor-pointer fixed left-10 top-4 z-50"
             onClick={() => setShowSidebar(!showSidebar)}> <SidebarClose stroke="orange" /> </button>
         ) : (
-          <button className="fixed z-30 flex items-center cursor-pointer left-10 top-4" onClick={() => setShowSidebar(!showSidebar)}>
+          <button
+            id="open-sidebar"
+            aria-label="hidden"
+            className="fixed z-30 flex items-center cursor-pointer left-10 top-4"
+            onClick={() => setShowSidebar(!showSidebar)}>
             <SidebarOpen stroke="orange" />
           </button>)}
       <aside
