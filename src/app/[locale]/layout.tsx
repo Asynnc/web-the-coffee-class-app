@@ -6,10 +6,11 @@ import { Analytics } from '@vercel/analytics/react';
 import { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Suspense } from 'react';
-import { Header } from '../components/Header';
 import Provider from './Provider';
 import './globals.css';
 import Sidebar2 from '@/components/Sidebar';
+import { Header } from '@/components/Header';
+import { useLocale } from 'next-intl';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,12 +33,23 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children
+  children,
+  params,
 }: {
   children: React.ReactNode,
+  params: {
+    locale: string
+  }
 }) {
+
+  const locale = useLocale();
+
+  if (params.locale !== locale) {
+    <Spinner />
+  }
+
   return (
-    <html lang="pt-BR" className={inter.className}>
+    <html lang={locale} className={inter.className}>
       <body className='bg-zinc-900'>
         <Provider>
           <Suspense fallback={<Spinner />}>

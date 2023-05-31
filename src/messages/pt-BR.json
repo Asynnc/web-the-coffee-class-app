@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "presentation": "Apresentação",
+    "description": "Gostaríamos de apresentar nossa proposta de aplicativo que visa melhorar a experiência dos clientes em restaurantes, oferecendo agilidade no atendimento dos garçons e permitindo que os clientes acompanhem o status de preparo de seus pedidos em tempo real.",
+    "project-description-title": "Descrição do Projeto",
+    "project-description": "Nosso aplicativo possui uma interface intuitiva e fácil de usar, permitindo que os garçons recebam os pedidos dos clientes de forma rápida e prática, sem a necessidade de papel e caneta, reduzindo erros e otimizando o tempo. Os clientes, por sua vez, podem acompanhar em tempo real o estado de preparação dos seus pedidos, evitando a ansiedade e a incerteza que muitas vezes ocorrem durante o processo.",
+    "other-notes": "Outras notas",
+    "other-details-1": "Nosso aplicativo também permite personalizar o cardápio, adequando-o às necessidades e peculiaridades de cada estabelecimento. Além disso, todas as informações são armazenadas em um banco de dados seguro, permitindo o acesso a relatórios e análises que podem ser utilizados para futuras melhorias.",
+    "other-details-2": "Acreditamos que esta solução pode acrescentar valor aos seus clientes e trazer uma experiência mais positiva aos clientes dos seus estabelecimentos, aumentando a satisfação e fidelização.",
+    "other-details-3": "Permanecemos à disposição para maiores informações e esclarecimentos sobre nosso aplicativo.",
+    "technical-specifications": "Especificações técnincas",
+    "technical-description": "A bandeja de cartão de madeira de nogueira é fresada com precisão para caber perfeitamente em uma pilha de cartões Focus. O divisor de aço revestido a pó separa os cartões ativos dos novos ou pode ser usado para arquivar listas de tarefas importantes.",
+    "interface": "Interface",
+    "interface-description": "Interface de usuário intuitiva e fácil de usar para que os servidores possam registrar pedidos rapidamente e atualizar seu status.",
+    "real-time": "Tempo real",
+    "real-time-details": "Funcionalidade de comunicação em tempo real entre garçons e cozinha, permitindo atualizações instantâneas sobre o status do pedido.",
+    "management": "Gerenciamento",
+    "management-details": "Sistema de gerenciamento de estoque para garantir que os ingredientes necessários estejam sempre disponíveis para preparar os pedidos.",
+    "data-analysis": "Análise de dados",
+    "data-analysis-details": "Gerar informações valiosas sobre o desempenho do restaurante, como tempo médio de preparação de pedidos e número de pedidos por hora, para ajudar a melhorar a eficiência do serviço e aumentar a satisfação do cliente."
+  }
+}

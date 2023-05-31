@@ -1,0 +1,22 @@
+{
+  "Index": {
+    "presentation": "Presentation",
+    "description": "We would like to present our proposal for an application that aims to improve the experience of customers in restaurants, offering agility in the service of waiters and allowing customers to follow the status of the preparation of their orders in real time.",
+    "project-description-title": "Project Description",
+    "project-description": "Our application has an intuitive and easy-to-use interface, allowing waiters to receive orders from customers quickly and conveniently, without the need for paper and pen, reducing errors and optimizing time. Customers, in turn, can follow the preparation status of their orders in real time, avoiding the anxiety and uncertainty that often occur during the process.",
+    "other-notes": "Others Notes",
+    "other-details-1": "Our application also allows you to customize the menu, adapting it to the needs and peculiarities of each establishment. In addition, all information is stored in a secure database, allowing access to reports and analyzes that can be used for future improvements.",
+    "other-details-2": "We believe that this solution can add value to your customers and bring a more positive experience to your establishments patrons, increasing satisfaction and loyalty.",
+    "other-details-3": "We remain at your disposal for further information and clarifications about our application.",
+    "technical-specifications": "Technical Specifications",
+    "technical-description": "The walnut wood card tray is precision milled to perfectly fit a stack of Focus cards. The powder coated steel divider separates active cards from new ones, or can be used to archive important task lists.",
+    "interface": "Interface",
+    "interface-description": "Intuitive and easy-to-use user interface so servers can quickly register orders and update their status.",
+    "real-time": "Real Time",
+    "real-time-details": "Real-time communication functionality between waiters and kitchen, allowing instant updates on order status.",
+    "management": "Management",
+    "management-details": "Inventory management system to ensure the necessary ingredients are always available to prepare orders.",
+    "data-analysis": "Data analysis",
+    "data-analysis-details": "generate valuable insights into restaurant performance, such as average order preparation time and number of orders per hour, to help improve service efficiency and increase customer satisfaction."
+  }
+}
