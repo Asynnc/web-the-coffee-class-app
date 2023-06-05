@@ -48,7 +48,7 @@ export default function Sidebar2() {
           </button>)}
       <aside
         className={`bg-zinc-900 border-r border-white/10 w-80 fixed lest-0 top-0 bottom-0 p-6 z-40 ease-in-out duration-300 ${showSidebar ? "translate-x-0" : "-translate-x-full"}`}>
-        <Image src={LogoIMG} alt="The Coffee Class Logo" className="-mt-4 cursor-pointer" role='presentation' />
+        <Image src={'/3.webp'} width={300} height={100} alt="The Coffee Class Logo" className="-mt-4 cursor-pointer" role='presentation' />
         <Suspense fallback={<Spinner />}>
           <NavLinks onClick={handleLinkClick} />
         </Suspense>
