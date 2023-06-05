@@ -6,9 +6,9 @@ import { FeedbackContentStep } from './Steps/FeedbackContentStep'
 import { FeedbackSuccessStep } from './Steps/FeedbackSuccessStep'
 import { FeedbackTypeStep } from './Steps/FeedbackTypeStep'
 
-import bugImageUrl from '../../../assets/icons/bug.png'
-import ideaImageUrl from '../../../assets/icons/idea.png'
-import thoughtImageUrl from '../../../assets/icons/thought.png'
+import bugImageUrl from '../../../../public/bug.webp'
+import ideaImageUrl from '../../../../public/idea.webp'
+import thoughtImageUrl from '../../../../public/thought.webp'
 
 export const feedbackTypes = {
   BUG: {

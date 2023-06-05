@@ -1,6 +1,5 @@
 'use client'
 import Image from 'next/image'
-import successImageUrl from '../../../../assets/icons/success.png'
 import { CloseButton } from '../../CloseButton'
 
 interface FeedbackSuccessStepProps {
@@ -13,7 +12,7 @@ export function FeedbackSuccessStep({ onFeedbackRestartRequested }: FeedbackSucc
       <header><CloseButton /></header>
 
       <div className="flex flex-col items-center py-10 w-[304px]">
-        <Image src={successImageUrl} alt='Imagem de enviado com sucesso' width={32} height={32} />
+        <Image src={'/success.webp'} alt='Imagem de enviado com sucesso' width={32} height={32} quality={100} />
 
         <span className='text-xl mt-2'>Agradecemos o feedback!</span>
 
