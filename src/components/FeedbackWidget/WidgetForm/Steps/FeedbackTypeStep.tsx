@@ -1,6 +1,4 @@
-'use client'
 import { CloseButton } from '../../CloseButton'
-
 import Image from 'next/image'
 import { FeedbackType, feedbackTypes } from '..'
 

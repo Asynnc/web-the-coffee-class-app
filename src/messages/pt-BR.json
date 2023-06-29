@@ -40,5 +40,11 @@
   "Products": {
     "title": "Produtos",
     "description": "Listagem de produtos"
+  },
+  "Feedback": {
+    "title": "Deixe seu feedback",
+    "bug": "Erro",
+    "idea": "Ideia",
+    "thought": "Outro"
   }
 }
