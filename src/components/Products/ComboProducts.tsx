@@ -94,9 +94,9 @@ export default function ComboProducts({ products }: Props) {
           </div>
         </Combobox>
       </div>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-4 gap-4 mx-auto md:px-6" >
         {
-          selected ? <ProductCard key={selected._id} name={selected.name} urlImage={selected.imagePath} price={selected.price} /> : (
+          selected ? <ProductCard key={selected._id} name={selected.name} urlImage={selected.imagePath} price={selected.price} product={selected} /> : (
             <ProductsCard products={products} />
           )
         }
