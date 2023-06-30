@@ -78,7 +78,7 @@ export default function ProductsDropdown() {
         </Transition>
       </Menu>
 
-      <CreateProductModal isVisible={true} onClose={() => console.log('Aqui serve pra fechar')} />
+      <CreateProductModal isVisible={false} onClose={() => console.log('Aqui serve pra fechar')} />
     </>
   )
 }
