@@ -45,6 +45,7 @@ export default function ProductCard({ urlImage, name, price, product }: ProductC
           priority
           className="mx-auto mb-4 w-32 rounded-md"
           alt={name}
+          title={`Clique para obter detalhes sobre ${name}`}
           onClick={() => handleOpenProductModal(product)}
         />
         <h6 className="text-md font-medium leading-tight whitespace-pre-line">{name}</h6>

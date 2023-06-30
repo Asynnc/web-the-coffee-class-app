@@ -68,7 +68,7 @@ export default async function RootLayout({
             <div className='relative h-screen'>
               <Header />
               <HeroPattern />
-              <div className='py-12 max-w-5xl px-8 mx-auto'>
+              <div className='py-12 max-w-6xl px-8 mx-auto'>
                 {children}
                 <Footer />
               </div>

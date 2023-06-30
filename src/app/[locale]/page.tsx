@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Rotule />
-      <main className="prose prose-invert prose-headings:text-zinc-100 prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-xl prose-h2:font-medium prose-p:text-zinc-400 prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-a:text-cyan-400 max-w-5xl ">
+      <main className="prose prose-invert prose-headings:text-zinc-100 prose-headings:font-semibold prose-h1:text-3xl prose-h2:text-xl prose-h2:font-medium prose-p:text-zinc-400 prose-pre:bg-zinc-900 prose-pre:border prose-pre:border-white/10 prose-pre:rounded-2xl prose-a:text-cyan-400 max-w-6xl ">
         <h1 id="presentation">{t('presentation')}</h1>
         <p>{t('description')}</p>
         <Image src={'/3.webp'} alt={'Banner The Coffe Class'} width={1000} height={300} quality={100} priority />

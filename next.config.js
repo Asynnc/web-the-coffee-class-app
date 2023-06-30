@@ -6,16 +6,23 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "https://api.the-coffee-class.com.br/api",
+    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "http://localhost:3008/api",
   },
   images: {
+    unoptimized: false,
     minimumCacheTTL: 60,
-    domains: ['https://imgur.com/', 'https://api.the-coffee-class.com.br', 'the-coffee-class.s3.amazonaws.com'],
+    domains: ['https://imgur.com/', 'https://api.the-coffee-class.com.br', 'the-coffee-class.s3.amazonaws.com', 'http://localhost:3000'],
     remotePatterns: [
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '3001',
+        port: '3000',
+        pathname: '/**',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3008',
         pathname: '/uploads/**',
       },
       {

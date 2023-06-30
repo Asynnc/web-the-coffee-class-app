@@ -2,9 +2,17 @@
 
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDown, Coffee, Download, Plus, PlusCircle } from 'lucide-react'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
+import CreateProductModal from './CreateProduct'
 
 export default function ProductsDropdown() {
+
+  const [isVisibleModalCreate, setIsVisibleModalCreate] = useState(false)
+
+  function handleVisibleModalCreate() {
+    setIsVisibleModalCreate(!isVisibleModalCreate)
+  }
+
   return (
     <>
       <Menu as="div" className="relative inline-block text-left">
@@ -25,10 +33,9 @@ export default function ProductsDropdown() {
             <Menu.Item>
               {({ active }) => (
                 <button
-                  disabled
+                  onClick={handleVisibleModalCreate}
                   className={`${active ? 'bg-orange-200 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm disabled:bg-zinc-200`}
-                >
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm disabled:bg-zinc-200`}>
                   {active ? (
                     <PlusCircle
                       className="mr-2 h-5 w-5"
@@ -70,6 +77,8 @@ export default function ProductsDropdown() {
           </Menu.Items>
         </Transition>
       </Menu>
+
+      <CreateProductModal isVisible={true} onClose={() => console.log('Aqui serve pra fechar')} />
     </>
   )
 }
