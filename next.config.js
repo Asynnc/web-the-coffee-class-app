@@ -6,7 +6,7 @@ const nextConfig = {
     appDir: true,
   },
   env: {
-    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "http://localhost:3008/api",
+    NEXT_PUBLIC_API_ENDPOINT_PRODUCTION: "https://api.the-coffee-class.com.br/api",
   },
   images: {
     unoptimized: false,
