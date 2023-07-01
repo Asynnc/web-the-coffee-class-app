@@ -79,8 +79,7 @@ export default function ComboProducts({ products }: Props) {
                           {selected ? (
                             <span
                               className={`absolute inset-y-0 left-0 flex items-center ${active ? 'text-white' : 'text-teal-600'
-                                }`}
-                            >
+                                }`}>
                               <Check className="h-5 w-5" aria-hidden="true" />
                             </span>
                           ) : null}

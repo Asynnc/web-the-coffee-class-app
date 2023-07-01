@@ -135,7 +135,7 @@ export default function OrdersBoard({ ordersWaiting, ordersProduction, ordersDon
         </Tab.Panels>
       </Tab.Group>
 
-      <OrderModal isVisible={isModalVisible} order={selectedOrder || null} onClose={handleCloseOrderModal} />
+      <OrderModal isVisible={isModalVisible} order={selectedOrder || null} onClose={handleCloseOrderModal} isLoading={isLoading} />
     </div>
   )
 }

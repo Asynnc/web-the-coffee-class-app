@@ -1,5 +1,3 @@
-'use client'
-
 import { OrderProps } from "@/types/Order";
 import { formatCurrency } from "@/utils/formatCurrency";
 import { Dialog, Transition } from "@headlessui/react";
@@ -29,9 +27,7 @@ export default function OrderModal({ isVisible, order, onClose, onCancelOrder, i
   const cancelOrder = async (id: OrderProps['_id']): Promise<void> => {
     await fetch(`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/orders/${id}`, {
       method: 'DELETE',
-    }).then(
-      () => onClose()
-    )
+    }).then(() => onClose())
   }
 
   // const changeOrderStatus = async (): Promise<void> => {

@@ -9,8 +9,12 @@ export default function ProductsDropdown() {
 
   const [isVisibleModalCreate, setIsVisibleModalCreate] = useState(false)
 
-  function handleVisibleModalCreate() {
-    setIsVisibleModalCreate(!isVisibleModalCreate)
+  function handleOpenModalCreate() {
+    setIsVisibleModalCreate(true)
+  }
+
+  function handleCloseModalCreate() {
+    setIsVisibleModalCreate(false)
   }
 
   return (
@@ -33,9 +37,9 @@ export default function ProductsDropdown() {
             <Menu.Item>
               {({ active }) => (
                 <button
-                  onClick={handleVisibleModalCreate}
-                  className={`${active ? 'bg-orange-200 text-white' : 'text-gray-900'
-                    } group flex w-full items-center rounded-md px-2 py-2 text-sm disabled:bg-zinc-200`}>
+                  onClick={handleOpenModalCreate}
+                  className={`${active ? 'bg-orange-500 text-white' : 'text-gray-900'
+                    } group flex w-full items-center px-2 py-2 text-sm disabled:bg-zinc-200`}>
                   {active ? (
                     <PlusCircle
                       className="mr-2 h-5 w-5"
@@ -56,7 +60,7 @@ export default function ProductsDropdown() {
                 <a href={`${process.env.NEXT_PUBLIC_API_ENDPOINT_PRODUCTION}/products/report`} target="__blank" className='no-underline'>
                   <button
                     className={`${active ? 'bg-orange-500 text-white' : 'text-gray-900'
-                      } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                      } group flex w-full items-center px-2 py-2 text-sm`}
                   >
                     {active ? (
                       <Download
@@ -78,7 +82,7 @@ export default function ProductsDropdown() {
         </Transition>
       </Menu>
 
-      <CreateProductModal isVisible={false} onClose={() => console.log('Aqui serve pra fechar')} />
+      <CreateProductModal isVisible={isVisibleModalCreate} onClose={handleCloseModalCreate} />
     </>
   )
 }
